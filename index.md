@@ -5,6 +5,7 @@
 ### General Projects / Learning
 
 [Have I Been PWNED - Offline checker](https://github.com/Landsil/haveibeenpwned-password-check)
+
 ![GitHub stars](https://img.shields.io/github/stars/landsil/haveibeenpwned-password-check?style=social)
 <img src="images/HIBP_24-11-2019.png?raw=true"/>
 
