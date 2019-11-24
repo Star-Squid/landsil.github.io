@@ -1,0 +1,14 @@
+title: Mat's learning project # your name (or website title) here
+logo: "/images/logo.jpg?raw=true" # your photo (or logo) here
+description: > # your text below (remove <br> elements if you don't need line breaks)
+  Hi,<br>
+  My name is Mat and I'm an IT Guy<br>
+  I like technology and fixing things.<br>
+  Preferably while using some tech to do that :)<br>
+  Have a look around at some sample projects of mine.
+  <br><br>
+  <a href="https://www.linkedin.com/in/mateuszbijakowski/">LinkedIn</a><br>
+  <a href="https://github.com/Landsil/">GitHub</a>
+  
+theme: jekyll-theme-minimal
+google_analytics: UA-000000-0 # your Google Analytics tracking ID here
