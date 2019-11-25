@@ -12,6 +12,7 @@
 ---
 ##### [PeopleHR_To_GoogleCalendar](https://github.com/Landsil/PeopleHR_To_GoogleCalendar)
 Python 3.* script to create Google calendar events for `Anniversaries` and `Birthdays` based on PeopleHR employee data.
+
 ![GitHub stars](https://img.shields.io/github/stars/landsil/PeopleHR_To_GoogleCalendar?style=social)
 
 ---
