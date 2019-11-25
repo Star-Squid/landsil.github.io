@@ -4,18 +4,18 @@
 
 ### General Projects / Learning
 
-[Have I Been PWNED - Offline checker](https://github.com/Landsil/haveibeenpwned-password-check)
+##### [Have I Been PWNED - Offline checker](https://github.com/Landsil/haveibeenpwned-password-check)
 
 ![GitHub stars](https://img.shields.io/github/stars/landsil/haveibeenpwned-password-check?style=social)
 <img src="images/HIBP_24-11-2019.png?raw=true"/>
 
 ---
-[TO DO PeopleHR_To_GoogleCalendar](https://github.com/Landsil/PeopleHR_To_GoogleCalendar)
-<img src="images/dummy_thumbnail.jpg?raw=true"/>
+##### [PeopleHR_To_GoogleCalendar](https://github.com/Landsil/PeopleHR_To_GoogleCalendar)
+Python 3.* script to create Google calendar events for `Anniversaries` and `Birthdays` based on PeopleHR employee data.
 
 ---
-[TO DO Kisi](https://github.com/Landsil/kisi)
-<img src="images/dummy_thumbnail.jpg?raw=true"/>
+##### [Apps Script](https://github.com/Landsil/apps_script)
+Small one-file API scripts on Google's Apps Script
 
 ---
 
