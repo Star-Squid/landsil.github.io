@@ -19,18 +19,15 @@ Python 3.* script to create Google calendar events for `Anniversaries` and `Birt
 ##### [Apps Script](https://github.com/Landsil/apps_script)
 Small one-file API scripts on Google's Apps Script
 
+![GitHub stars](https://img.shields.io/github/stars/landsil/apps_script?style=social)
+
 ---
 
 ### Other fun things I do
 
-- [Project 1 Title](http://example.com/)
-- [Project 2 Title](http://example.com/)
-- [Project 3 Title](http://example.com/)
-- [Project 4 Title](http://example.com/)
-- [Project 5 Title](http://example.com/)
+- [Unsplash](https://unsplash.com/@landsil) - free "stock" photos.
 
 ---
-
 
 
 
