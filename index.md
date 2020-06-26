@@ -29,7 +29,7 @@ Small one-file API scripts on Google's Apps Script
 - [Unsplash](https://unsplash.com/@landsil) - free "stock" photos.
 
 - [Podcast](https://anchor.fm/complainer-daily) - Fun project to test commitment, learn writing scripts and recording. 
-  - [Scripts here](https://landsil.github.io/podcast_scripts)
+  - [Scripts here](https://landsil.github.io/podcast_scripts.html)
 
 
 ---
