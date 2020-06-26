@@ -1,8 +1,14 @@
-## Portfolio
+### Portfolio
+
+Please consider this page a learning and showcase project. It will both link some things I'm proud off, some thinks people can find usefull and also things I have to share to be motivated to continue working on them.
+1. 3 to 5 of my most interesting GitHub repositories will be here.
+2. Some GitPages pages with markdown ( this one ) html and css ( TODO )
+3. Some "website alternatives" showcase
+4. Some actual external websites with other initiatives
 
 ---
 
-### General Projects / Learning
+#### Github Projects
 
 ##### [Have I Been PWNED - Offline checker](https://github.com/Landsil/haveibeenpwned-password-check)
 
@@ -24,7 +30,7 @@ Small one-file API scripts on Google's Apps Script
 ---
 
 
-### Other fun things I do
+#### Other fun things I do
 
 - [Unsplash](https://unsplash.com/@landsil) - free "stock" photos.
 
