@@ -33,3 +33,10 @@ Small one-file API scripts on Google's Apps Script
 
 
 ---
+
+##### You can find me at:
+- **[LinkedIn](https://www.linkedin.com/in/mateuszbijakowski)** - I won't reply to anything most likly.
+- **[GitHub](https://github.com/Landsil)** - For all of my projects I didn't bother to add here.
+- **[Kaybase](https://keybase.io/landsil)** - Becouse I like them
+
+and probably in some other places too
