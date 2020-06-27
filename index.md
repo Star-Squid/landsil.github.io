@@ -35,7 +35,7 @@ Small one-file API scripts on Google's Apps Script
 - [Unsplash](https://unsplash.com/@landsil) - free "stock" photos.
 
 - [Podcast](https://anchor.fm/complainer-daily) - Fun project to test commitment, learn writing scripts and recording. 
-  - [Scripts here](https://www.notion.so/Complainer-Daily-149632a0af2f4a4f84524eb5dc2d5dc9) - Notion pages
+  - [Notes/Scripts here](https://www.notion.so/Complainer-Daily-149632a0af2f4a4f84524eb5dc2d5dc9) - Notion pages
 
 
 ---
