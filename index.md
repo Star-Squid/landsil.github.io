@@ -1,6 +1,6 @@
 ### Portfolio
 
-Please consider this page a learning and showcase project. It will both link some things I'm proud off, some thinks people can find usefull and also things I have to share to be motivated to continue working on them.
+Please consider this page a learning and showcase project. It will both link some things I'm proud off, some projects people can find usefull and also stuff I have to share to be motivated to continue working on it.
 1. 3 to 5 of my most interesting GitHub repositories will be here.
 2. Some GitPages pages with markdown ( this one ) html and css ( TODO )
 3. Some "website alternatives" showcase
@@ -35,7 +35,7 @@ Small one-file API scripts on Google's Apps Script
 - [Unsplash](https://unsplash.com/@landsil) - free "stock" photos.
 
 - [Podcast](https://anchor.fm/complainer-daily) - Fun project to test commitment, learn writing scripts and recording. 
-  - [Show notes](https://www.notion.so/Complainer-Daily-149632a0af2f4a4f84524eb5dc2d5dc9) - Notion pages
+  - [Show notes](https://www.notion.so/Complainer-Daily-149632a0af2f4a4f84524eb5dc2d5dc9) - on Notion pages
 
 
 ---
