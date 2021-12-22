@@ -17,8 +17,7 @@ Please consider this page a learning and showcase project. It will both link som
 
 ---
 
-##### [apps_script--GoogleWorkspace_UserManager
-](https://github.com/Landsil/apps_script--GoogleWorkspace_UserManager)
+##### [apps_script--GoogleWorkspace_UserManager](https://github.com/Landsil/apps_script--GoogleWorkspace_UserManager)
 This set of scripts let's you update your user's data from a spreadsheet.
 
 ![GitHub stars](https://img.shields.io/github/stars/Landsil/apps_script--GoogleWorkspace_UserManager?style=social)
