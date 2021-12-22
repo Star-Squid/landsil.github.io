@@ -16,16 +16,33 @@ Please consider this page a learning and showcase project. It will both link som
 <img src="images/HIBP_24-11-2019.png?raw=true"/>
 
 ---
-##### [PeopleHR_To_GoogleCalendar](https://github.com/Landsil/PeopleHR_To_GoogleCalendar)
-Python 3.* script to create Google calendar events for `Anniversaries` and `Birthdays` based on PeopleHR employee data.
 
-![GitHub stars](https://img.shields.io/github/stars/landsil/PeopleHR_To_GoogleCalendar?style=social)
+##### [apps_script--GoogleWorkspace_UserManager
+](https://github.com/Landsil/apps_script--GoogleWorkspace_UserManager)
+This set of scripts let's you update your user's data from a spreadsheet.
+
+![GitHub stars](https://img.shields.io/github/stars/Landsil/apps_script--GoogleWorkspace_UserManager?style=social)
 
 ---
+
+##### [apps_script--GoogleWorkspace-API](https://github.com/Landsil/apps_script--GoogleWorkspace-API)
+Set of basic scripts for pulling usefull data from Google Workspace.
+
+![GitHub stars](https://img.shields.io/github/stars/Landsil/apps_script--GoogleWorkspace-API?style=social)
+
+---
+
 ##### [Apps Script](https://github.com/Landsil/apps_script)
 Small one-file API scripts on Google's Apps Script
 
 ![GitHub stars](https://img.shields.io/github/stars/landsil/apps_script?style=social)
+
+---
+
+##### [PeopleHR_To_GoogleCalendar](https://github.com/Landsil/PeopleHR_To_GoogleCalendar)
+Python 3.* script to create Google calendar events for `Anniversaries` and `Birthdays` based on PeopleHR employee data.
+
+![GitHub stars](https://img.shields.io/github/stars/landsil/PeopleHR_To_GoogleCalendar?style=social)
 
 ---
 
