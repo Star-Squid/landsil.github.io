@@ -1,0 +1,92 @@
+body {
+  text-align: center;
+  background-color: #D4D4D4;
+  font-family: 'Barlow', sans-serif;
+}
+
+.cat{
+  width: 300px;
+  height: 300px;
+  object-fit: contain;
+}
+
+.treat{
+    background-color: #BD7320;
+    background-image: url("images/treat300.png");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+.hand {
+  background-color: #BD7320;
+  background-repeat: no-repeat;
+  background-image: url("images/hand300.png");
+  background-position: center;
+}
+
+
+.btn {
+  margin: 25px;
+  display: inline-block;
+  height: 200px;
+  width: 200px;
+  border: 5px solid rgb(255, 255, 255);
+  border-radius: 20%;
+  position: relative;
+  text-align: center;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bolder;
+  padding-bottom: 50px;
+}
+
+#result{
+  color: #000000;
+  font-family: 'Barlow', sans-serif;
+  font-weight: bolder;
+  font-size: 1.5rem;
+  margin:  2%;
+}
+
+#page-title {
+  font-family: 'Nautigal', cursive;
+  font-size: 3rem;
+  margin:  2%;
+  color: #A23715;
+}
+
+#about-title {
+  font-family: 'Nautigal', cursive;
+  margin:  1%;
+  font-size: 1.5rem;
+  font-weight: bolder;
+  color: #BD7320;
+}
+
+#about-text {
+  color: #000000;
+  font-family: 'Barlow', sans-serif;
+  margin-left: 30%;
+  margin-right: 30%;
+  margin-bottom: 50px;
+}
+
+.container {
+  display: block;
+  width: 50%;
+  margin: auto;
+}
+
+.game-over {
+  background-color: rgb(109, 56, 56);
+  opacity: 0.8;
+}
+
+.pressed {
+  box-shadow: 0 0 20px white;
+  background-color: grey;
+}
+
+.hidden {
+  visibility: hidden;
+}
