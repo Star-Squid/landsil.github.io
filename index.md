@@ -1,8 +1,8 @@
 ### Portfolio
 
-Please consider this page a learning and showcase project. It will both link some things I'm proud off, some projects people can find usefull and also stuff I have to share to be motivated to continue working on it.
+Please consider this page a learning and showcase project. It will link to some things I'm proud of, projects people can find useful, and also stuff I have to share to be motivated to continue working on.
 1. 3 to 5 of my most "interesting" GitHub repositories will be here.
-2. Some GitPages pages with markdown ( this one ) html and css ( TODO )
+2. Some GitPages pages with markdown (this one), html, and css (TODO)
 3. Some "website alternatives" showcase (Notion, Coda, things like that)
 4. Some actual external websites with other initiatives
 
@@ -18,14 +18,14 @@ Please consider this page a learning and showcase project. It will both link som
 ---
 
 ##### [apps_script--GoogleWorkspace_UserManager](https://github.com/Landsil/apps_script--GoogleWorkspace_UserManager)
-This set of scripts let's you update your user's data from a spreadsheet.
+This set of scripts lets you update your users' data from a spreadsheet.
 
 ![GitHub stars](https://img.shields.io/github/stars/Landsil/apps_script--GoogleWorkspace_UserManager?style=social)
 
 ---
 
 ##### [apps_script--GoogleWorkspace-API](https://github.com/Landsil/apps_script--GoogleWorkspace-API)
-Set of basic scripts for pulling usefull data from Google Workspace.
+Set of basic scripts for pulling useful data from Google Workspace.
 
 ![GitHub stars](https://img.shields.io/github/stars/Landsil/apps_script--GoogleWorkspace-API?style=social)
 
@@ -50,15 +50,15 @@ Python 3.* script to create Google calendar events for `Anniversaries` and `Birt
 
 - [Unsplash](https://unsplash.com/@landsil) - free "stock" photos.
 
-- [Podcast](https://anchor.fm/complainer-daily) - Fun project to test commitment, learn writing scripts and recording.
+- [Podcast](https://anchor.fm/complainer-daily) - a fun project to test commitment, learn writing scripts and recording.
   - [Show notes](https://www.notion.so/Complainer-Daily-149632a0af2f4a4f84524eb5dc2d5dc9) - on Notion pages
 
 
 ---
 
 ##### You can find me at:
-- **[LinkedIn](https://www.linkedin.com/in/mateuszbijakowski)** - I won't reply to anything most likly.
+- **[LinkedIn](https://www.linkedin.com/in/mateuszbijakowski)** - I won't reply to anything most likely.
 - **[GitHub](https://github.com/Landsil)** - For all of my projects I didn't bother to add here.
-- **[Kaybase](https://keybase.io/landsil)** - Becouse I like them
+- **[Keybase](https://keybase.io/landsil)** - Because I like them
 
 and probably in some other places too
