@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+#title{
+  position: absolute;
+  left: 10vw;
+  top: 10vh;
+  z-index: 3;
+  }
+
+div,
+h1{
+  margin:0;
+  padding: 0;
+  }
+
+h1 {
+  color: #fff;
+  font-family: 'Mr Bedfort', cursive;
+  font-size: 4rem;
+  }
+
+body {
+  background: rgb(19,36,11);
+  background:
+    linear-gradient(180deg, rgba(15,19,7,1) 1%, rgba(1,1,1,0) 10% 95%, rgba(15,19,7,0.9) 100%),
+    radial-gradient(circle,  rgba(30,61,14,0.9) 20%, rgba(15,19,7,0.9) 75%),
+    radial-gradient(circle,  rgba(30,61,14,0.88) 25%, rgba(19,36,11,0.88) 55%),
+    url("grain.png");
+  }
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+a:hover,
+a:active{
+  color: #B9BF4D;
+}
+
+#container{
+  position: relative;
+  width: 100vw;
+  max-width: 1200px;
+  height: 100vh;
+  }
+
+#container img,
+#container svg{
+  height: 100%;
+  max-height: 100vw;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-bottom: -20px;
+  }
+
+#container svg{
+  filter: opacity(15%);
+  }
+/*
+#container svg:hover{
+  cursor: pointer;
+  } */
+
+#barbara:hover,
+#mat:hover,
+#cat:hover{
+  filter: opacity(0);
+  cursor: pointer;
+  }
