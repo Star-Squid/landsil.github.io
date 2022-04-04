@@ -1,3 +1,4 @@
+//random starting motivation
 var motivation = Math.floor(Math.random() * 3) + 2;
 console.log("Motivation: " + motivation);
 
@@ -5,8 +6,8 @@ var highFivesReceived  = 0;
 var rounds = 0;
 var treats = 0;
 
-//A buton gets clicked - animation and action
-$(".btn").click(function() { 
+//a buton gets clicked - animation and action
+$(".btn").click(function() {
     rounds ++;
     var currentChoice = this.id;
     animatePress(currentChoice);
@@ -16,7 +17,7 @@ $(".btn").click(function() {
     $("#result").removeClass("hidden");
 });
 
-//What happens when we offer a hand
+//when we offer a hand
 function newHand(){
     updateResult();
     if (motivation >= 4){highFive()}
@@ -26,7 +27,7 @@ function newHand(){
     console.log("Motivation: " + motivation);
 }
 
-//When we offer a treat
+//when we offer a treat
 function newTreat(){
     treats ++;
     $(".cat").attr("src", "images/cat7.png");
@@ -35,7 +36,7 @@ function newTreat(){
     console.log("Motivation: " + motivation);
     updateResult();
 
-//Automatic game over after 30 treats
+//automatic game over after 30 treats
         if (treats >= 30){
             setTimeout(function(){
                 $(".cat").attr("src", "images/cat8.png");
@@ -85,7 +86,7 @@ function gameOver(){
 }
 
 
-//Motivation rise and fall
+//motivation rise and fall
 function motivationFalls(){
     motivation -= (Math.floor(Math.random() * 3) +1);
     if (motivation < 0) {motivation = 0};
@@ -109,7 +110,14 @@ function animatePress(currentChoice) {
   }
 
 
-//clicking on the About shows description
-$("#about-title").click(function() { 
-    $("#about-text").toggleClass("hidden");
-});
+//dialog handling
+var dialog = document.querySelector('dialog');
+dialogPolyfill.registerDialog(dialog);
+
+function showThisDialog() {
+  document.getElementById('this-dialog').showModal();
+}
+
+function hideThisDialog() {
+  document.getElementById('this-dialog').close();
+}
