@@ -6,8 +6,8 @@
 
 #title{
   position: absolute;
-  left: 10vw;
-  top: 10vh;
+  left: 10vmin;
+  top: 15vmin;
   z-index: 3;
   }
 
@@ -30,7 +30,7 @@ body {
     radial-gradient(circle,  rgba(30,61,14,0.9) 20%, rgba(15,19,7,0.9) 75%),
     radial-gradient(circle,  rgba(30,61,14,0.88) 25%, rgba(19,36,11,0.88) 55%),
     url("grain.png");
-  font-size: 60px;
+  font-size: 6rem;
 
   }
 
@@ -48,7 +48,7 @@ a:active{
   position: relative;
   width: 100vw;
   max-width: 1200px;
-  height: 100vh;
+  height: 97vh;
   }
 
 #container img,
