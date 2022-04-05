@@ -20,7 +20,7 @@ h1{
 h1 {
   color: #fff;
   font-family: 'Mr Bedfort', cursive;
-  font-size: 60px;
+  font-size: 13vmin;
   }
 
 body {
@@ -64,10 +64,6 @@ a:active{
 #container svg{
   filter: opacity(15%);
   }
-/*
-#container svg:hover{
-  cursor: pointer;
-  } */
 
 #barbara:hover,
 #mat:hover,
