@@ -20,7 +20,7 @@ h1{
 h1 {
   color: #fff;
   font-family: 'Mr Bedfort', cursive;
-  font-size: 4rem;
+  font-size: 60px;
   }
 
 body {
@@ -30,6 +30,8 @@ body {
     radial-gradient(circle,  rgba(30,61,14,0.9) 20%, rgba(15,19,7,0.9) 75%),
     radial-gradient(circle,  rgba(30,61,14,0.88) 25%, rgba(19,36,11,0.88) 55%),
     url("grain.png");
+  font-size: 60px;
+
   }
 
 a {
