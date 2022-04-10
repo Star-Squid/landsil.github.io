@@ -4,6 +4,10 @@
   box-sizing: border-box;
   }
 
+html{
+  font-family: 'Mr Bedfort', cursive;
+  }
+
 #title{
   position: absolute;
   left: 10vmin;
@@ -15,9 +19,6 @@ div,
 h1{
   margin:0;
   padding: 0;
-  }
-
-h1 {
   color: #fff;
   font-family: 'Mr Bedfort', cursive;
   font-size: 13vmin;
