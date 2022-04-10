@@ -6,6 +6,7 @@
 
 html{
   font-family: 'Mr Bedfort', cursive;
+  color: #ffffff;
   }
 
 #title{
@@ -37,12 +38,12 @@ body {
 
 a {
   text-decoration: none;
-  color: #fff;
+  color: #B9BF4D;
 }
 
 a:hover,
 a:active{
-  color: #B9BF4D;
+  color: #ffffff;
 }
 
 #container{
