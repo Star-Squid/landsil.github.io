@@ -4,22 +4,26 @@
   box-sizing: border-box;
   }
 
-html{
-  font-family: 'Mr Bedfort', cursive;
-  color: #ffffff;
-  }
-
 #title{
   position: absolute;
   left: 10vmin;
   top: 15vmin;
   z-index: 3;
+  height: fit-content;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font-family: 'Mr Bedfort', cursive;
+  font-size: 13vmin;
   }
 
 div,
 h1{
   margin:0;
   padding: 0;
+  }
+
+h1 {
   color: #fff;
   font-family: 'Mr Bedfort', cursive;
   font-size: 13vmin;
@@ -38,19 +42,18 @@ body {
 
 a {
   text-decoration: none;
-  color: #B9BF4D;
+  color: #fff;
 }
 
 a:hover,
 a:active{
-  color: #ffffff;
+  color: #B9BF4D;
 }
 
 #container{
   position: relative;
-  width: 100vw;
-  max-width: 1200px;
-  height: 97vh;
+  width: 90vw;
+  height: 98vh;
   }
 
 #container img,
@@ -60,7 +63,7 @@ a:active{
   position: absolute;
   bottom: 0;
   right: 0;
-  margin-bottom: -20px;
+  margin-bottom: 1%;
   }
 
 #container svg{
