@@ -2,43 +2,28 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  }
-
-#title{
-  position: absolute;
-  left: 10vmin;
-  top: 15vmin;
-  z-index: 3;
-  height: fit-content;
-  margin: 0;
-  padding: 0;
-  color: #fff;
-  font-family: 'Mr Bedfort', cursive;
-  font-size: 13vmin;
-  }
-
-div,
-h1{
-  margin:0;
-  padding: 0;
-  }
-
-h1 {
-  color: #fff;
-  font-family: 'Mr Bedfort', cursive;
-  font-size: 13vmin;
-  }
+}
 
 body {
-  background: rgb(19,36,11);
-  background:
-    linear-gradient(180deg, rgba(15,19,7,1) 1%, rgba(1,1,1,0) 10% 95%, rgba(15,19,7,0.9) 100%),
-    radial-gradient(circle,  rgba(30,61,14,0.9) 20%, rgba(15,19,7,0.9) 75%),
-    radial-gradient(circle,  rgba(30,61,14,0.88) 25%, rgba(19,36,11,0.88) 55%),
+  background: rgb(19, 36, 11);
+  background: linear-gradient(
+      180deg,
+      rgba(15, 19, 7, 1) 1%,
+      rgba(1, 1, 1, 0) 10% 95%,
+      rgba(15, 19, 7, 0.9) 100%
+    ),
+    radial-gradient(circle, rgba(30, 61, 14, 0.9) 20%, rgba(15, 19, 7, 0.9) 75%),
+    radial-gradient(
+      circle,
+      rgba(30, 61, 14, 0.88) 25%,
+      rgba(19, 36, 11, 0.88) 55%
+    ),
     url("grain.png");
-  font-size: 6rem;
 
-  }
+  color: #fff;
+  font-family: "Mr Bedfort", cursive;
+  font-size: 11vmin;
+}
 
 a {
   text-decoration: none;
@@ -46,33 +31,53 @@ a {
 }
 
 a:hover,
-a:active{
-  color: #B9BF4D;
+a:active {
+  color: #b9bf4d;
 }
 
-#container{
-  position: relative;
-  width: 90vw;
-  height: 98vh;
-  }
+#container {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-around;
+}
 
-#container img,
-#container svg{
-  height: 100%;
-  max-height: 100vw;
+#title {
+  color: #fff;
+  font-family: "Mr Bedfort", cursive;
+  font-size: 11vmin;
+  width: 80vmin;
+  height: 45vmin;
+  padding: 3vmin 5vmin 5vmin 5vmin;
+}
+
+#image-group {
+  width: 45vmax;
+  height: 45vmax;
+  aspect-ratio: 1 / 1;
+  position: relative;
+}
+#image-group img,
+#image-group svg {
+  width: 45vmax;
+  height: 45vmax;
+  aspect-ratio: 1 / 1;
   position: absolute;
   bottom: 0;
   right: 0;
-  margin-bottom: 1%;
-  }
 
-#container svg{
+  transform: scale(1.4);
+}
+
+#image-group svg {
   filter: opacity(15%);
-  }
+}
 
 #barbara:hover,
 #mat:hover,
-#cat:hover{
+#cat:hover {
   filter: opacity(0);
   cursor: pointer;
-  }
+}
