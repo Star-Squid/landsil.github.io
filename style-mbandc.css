@@ -23,6 +23,7 @@ body {
   color: #fff;
   font-family: "Mr Bedfort", cursive;
   font-size: 11vmin;
+  overflow: hidden;
 }
 
 a {
