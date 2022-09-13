@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Brute force dice roll statistics for Dungeons and Dragons 5e"
+    />
+    <meta name="author" content="Landsil" />
+    <title>Dice Stats</title>
+
+    <link href="skin.css" rel="stylesheet" />
+    <script
+      src="https://kit.fontawesome.com/2a2cd0823a.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js" defer></script>
+    <link rel="icon" href="favicon.ico" sizes="any" />
+
+    <script src="skillCheck.js" charset="utf-8" defer></script>
+    <script src="displayData.js" charset="utf-8" defer></script>
+
+</head>
+
+  <body>
+
+<!-- header section -->
+<header class="centred">
+<div class="forcontent">
+  <h1>Dice Stats</h1>
+  <div class="subheading" role="doc-subtitle">
+    easily visualise the probability of a desired outcome when rolling dice in D&D
+  </div>
+  <div class="flourish">◇</div>
+</header>
+
+
+<!-- main section -->
+<main class="centred">
+<div class="forcontent">
+
+  <!-- input form -->
+  <form class="parameter-input">
+    <!-- left field -->
+    <fieldset>
+      <legend>
+        <h2>input parameters</h2>
+      </legend>
+
+
+        <label for="sides">Number of sides<br>
+        <input name="sides" value="sides" placeholder="20" id="inputHeight" data-value-type="integer" data-options-type="options" data-validation-method="number_range" type="number" min="1" max="20">
+        </label>
+
+        <label for="target">Target outcome<br>
+          <input name="target" value="target" placeholder="20" id="inputHeight" data-value-type="integer" data-options-type="options" data-validation-method="number_range" type="number" min="1" max="20">
+          </label>
+
+ 
+    </fieldset>
+
+    <!-- right field -->
+    <fieldset>
+      <legend>
+        <h2>optional</h2>
+      </legend>
+      
+        <label for="advantage">
+          <input name="advantage" type="checkbox" class="adv"
+          value="advantage" data-value-type="boolean"  onchange="checkAdvantage(this)">
+          Advantage
+        </label>
+
+        <label for="luck">
+          <input name="luck" type="checkbox" class="adv"
+          value="luck" data-value-type="boolean"  onchange="checkAdvantage(this)">
+          Luck
+        </label>
+
+        <label for="elven">
+          <input name="elven" type="checkbox" class="adv" 
+          value="elven" data-value-type="boolean"  onchange="checkAdvantage(this)">
+          Elven accuracy
+        </label>
+
+        <label for="disadvantage">
+          <input name="disadvantage" type="checkbox" class="dis"
+          value="disadvantage" data-value-type="boolean"  onchange="checkAdvantage(this)">
+          Disadvantage
+        </label>
+
+    </fieldset>
+
+<div class="button-area">
+  <button type="submit" class="pushable">
+    <span role="presentation" class="shadow"></span>
+    <span role="presentation" class="edge"></span>
+    <span class="frontbtn"> Roll dice! </span>
+  </button>
+</div>
+  </form>
+
+
+  <!-- <input name="sides" placeholder="20" id="inputHeight" data-value-type="integer" data-options-type="options" data-validation-method="number_range" type="number" min="1" max="20"> -->
+
+
+
+
+  <!-- results -->
+  <div class="flourish">&nbsp;</div>
+  <h2>Results:</h2>
+
+  <table class="present-results">
+    <thead>
+    <tr>
+      <th>&nbsp;</th>
+      <th>count</th>
+      <th>probability</th>
+      <th>x or higher</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td class="table-number">1</td>
+      <td class="count face1"></td>
+      <td class="probability face1"></td>
+      <td class="higher face1"></td>
+    </tr>
+    <tr>
+      <td class="table-number">2</td>
+      <td class="count face2"></td>
+      <td class="probability face2"></td>
+      <td class="higher face2"></td>
+    </tr>
+    <tr>
+      <td class="table-number">3</td>
+      <td class="count face3"></td>
+      <td class="probability face3"></td>
+      <td class="higher face3"></td>
+    </tr>
+    <tr>
+      <td class="table-number">4</td>
+      <td class="count face4"></td>
+      <td class="probability face4"></td>
+      <td class="higher face4"></td>
+    </tr>
+    <tr>
+      <td class="table-number">5</td>
+      <td class="count face5"></td>
+      <td class="probability face5"></td>
+      <td class="higher face5"></td>
+    </tr>
+    <tr>
+      <td class="table-number">6</td>
+      <td class="count face6"></td>
+      <td class="probability face6"></td>
+      <td class="higher face6"></td>
+    </tr>
+    <tr>
+      <td class="table-number">7</td>
+      <td class="count face7"></td>
+      <td class="probability face7"></td>
+      <td class="higher face7"></td>
+    </tr>
+    <tr>
+      <td class="table-number">8</td>
+      <td class="count face8"></td>
+      <td class="probability face8"></td>
+      <td class="higher face8"></td>
+    </tr>
+    <tr>
+      <td class="table-number">9</td>
+      <td class="count face9"></td>
+      <td class="probability face9"></td>
+      <td class="higher face9"></td>
+    </tr>
+    <tr>
+      <td class="table-number">10</td>
+      <td class="count face10"></td>
+      <td class="probability face10"></td>
+      <td class="higher face10"></td>
+    </tr>
+    <tr>
+      <td class="table-number">11</td>
+      <td class="count face11"></td>
+      <td class="probability face11"></td>
+      <td class="higher face11"></td>
+    </tr>
+    <tr>
+      <td class="table-number">12</td>
+      <td class="count face12"></td>
+      <td class="probability face12"></td>
+      <td class="higher face12"></td>
+    </tr>
+    <tr>
+      <td class="table-number">13</td>
+      <td class="count face13"></td>
+      <td class="probability face13"></td>
+      <td class="higher face13"></td>
+    </tr>
+    <tr>
+      <td class="table-number">14</td>
+      <td class="count face14"></td>
+      <td class="probability face14"></td>
+      <td class="higher face14"></td>
+    </tr>
+    <tr>
+      <td class="table-number">15</td>
+      <td class="count face15"></td>
+      <td class="probability face15"></td>
+      <td class="higher face15"></td>
+    </tr>
+    <tr>
+      <td class="table-number">16</td>
+      <td class="count face16"></td>
+      <td class="probability face16"></td>
+      <td class="higher face16"></td>
+    </tr>
+    <tr>
+      <td class="table-number">17</td>
+      <td class="count face17"></td>
+      <td class="probability face17"></td>
+      <td class="higher face17"></td>
+    </tr>
+    <tr>
+      <td class="table-number">18</td>
+      <td class="count face18"></td>
+      <td class="probability face18"></td>
+      <td class="higher face18"></td>
+    </tr>
+    <tr>
+      <td class="table-number">19</td>
+      <td class="count face19"></td>
+      <td class="probability face19"></td>
+      <td class="higher face19"></td>
+    </tr>
+    <tr>
+      <td class="table-number">20</td>
+      <td class="count face20"></td>
+      <td class="probability face20"></td>
+      <td class="higher face20"></td>
+    </tr>
+    <tbody>
+  </table>
+
+
+</div>
+
+</main>
+
+<!-- footer section -->
+<footer class="centred">
+
+  
+      <div class="flourish">◇</div>
+      <div class="forcontent">
+    <div>Created by <a href="https://mb-malta.co.uk/mateusz/">Landsil</a></div>
+    <div>
+      <a href="https://mb-malta.co.uk"><i class="fa-solid fa-envelope icon"></i></a>
+      <a href="https://github.com/Landsil"><i class="fa-brands fa-github icon"></i></a>
+    </div>
+
+  </div>
+</footer>
+
+    <!-- old -->
+    
+    <!-- <div class="container"> -->
+        
+        <!-- <form action="POST">
+            <legend>Roll Dice</legend>
+            <input type="text">
+            <label for="disadvantage"><input name="disadvantage" type="checkbox" value="badtime"></label>
+            <button type="submit" value="go">Roll dice</button>
+        </form> -->
+
+        <!-- <form>
+            <label><b>Enter a Message</b></label>
+            <input type="text" name="message" id="user_input">
+          <button type="submit" onclick="return showInput()">Roll dice</button>
+        </form>
+
+        <section id="contain-form">
+
+            <form>
+          <fieldset>
+            <legend>
+              <h2>Input your parameters</h2>
+            </legend>
+            <p>
+              <label for="reason">what can I do for you?</label>
+              <br />
+              <input
+                class="wide-input good-height"
+                type="text"
+                name="Reason"
+                list="reason"
+              />
+              <datalist id="reason">
+                <option>Work with me</option>
+                <option>Help me out</option>
+                <option>Feedback about this website</option>
+                <option>Check out this dad joke</option>
+              </datalist>
+            </p>
+            <p>
+              <label for="name">name</label>
+              <br />
+              <input
+                class="wide-input good-height"
+                id="name"
+                name="Name"
+                type="text"
+                placeholder="your name"
+                required
+              />
+            </p>
+
+            <p>
+              <label for="email">email</label>
+              <br />
+              <input
+                class="wide-input good-height"
+                id="email"
+                name="Email"
+                type="email"
+                placeholder="name@email.com"
+                required
+              />
+            </p>
+
+            <p>
+              <label for="message">your message</label>
+              <br />
+              <textarea
+                class="wide-input good-height"
+                id="message"
+                name="Message"
+                rows="6"
+                minlength="4"
+                maxlength="3000"
+                required
+              ></textarea>
+            </p>
+
+            <p class="checkbox-area">
+              <input
+                class="good-height"
+                type="checkbox"
+                id="human"
+                name="Human"
+                value="human"
+              />
+              <label for="human"
+                >&nbsp; I am a human, vegetable, or mineral</label
+              >
+            </p>
+
+            <p class="button-area right-slide">
+              <button type="reset" class="pushable">
+                <span role="presentation" class="shadow"></span>
+                <span role="presentation" class="edge"></span>
+                <span class="frontbtn"> Clear </span>
+              </button>
+
+              <button type="submit" name="Submit" class="pushable primary">
+                <span role="presentation" class="shadow"></span>
+                <span role="presentation" class="edge"></span>
+                <span class="frontbtn"> Send! </span>
+              </button>
+            </p>
+          </fieldset>
+        </form>
+        </section>
+
+        <section id="contain-results">
+          <h1>Results:</h1>
+        <p id="display"></p>
+</section> -->
+
+
+  </body>
+</html>
