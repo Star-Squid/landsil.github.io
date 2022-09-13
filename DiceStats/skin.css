@@ -153,18 +153,25 @@ footer .flourish {
   margin: 0 0.2rem;
 }
 
+#overview {
+  margin: 2rem;
+}
+
 /* FORM */
 
 form {
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: row wrap;
+  gap: 2rem;
   align-items: stretch;
+  justify-content: center;
   /* text-align: center; */
 }
 
 fieldset {
   border: thin solid var(--almostwhite);
   display: flex;
+  flex-grow: 1;
   flex-flow: column nowrap;
   justify-content: space-around;
   gap: 2rem;
@@ -176,7 +183,7 @@ fieldset {
 .button-area {
   text-align: center;
   width: 100%;
-  padding: 2rem 2rem 0;
+  padding: 0 2rem 0;
 }
 
 /* BUTTON */
@@ -258,6 +265,8 @@ button {
 .pushable:focus:not(:focus-visible) {
   outline: none;
 }
+
+
 
 /* TABLE */
 

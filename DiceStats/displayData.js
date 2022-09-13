@@ -1,11 +1,3 @@
-// const resultsField = document.getElementById('display');
-// let diceForm = document.getElementById("user_input");
-
-// function showInput() {
-//     resultsField.innerText = diceForm.value.toUpperCase();
-//     return false
-// }
-
 //uncheck advantages when a disadvantage is clicked
 function checkAdvantage(obj) {
   if (obj.classList.contains("dis")) {

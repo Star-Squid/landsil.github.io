@@ -40,7 +40,7 @@
 <div class="forcontent">
 
   <!-- input form -->
-  <form class="parameter-input">
+  <form class="parameter-input" id="parameter-input">
     <!-- left field -->
     <fieldset>
       <legend>
@@ -49,11 +49,12 @@
 
 
         <label for="sides">Number of sides<br>
-        <input name="sides" value="sides" placeholder="20" id="inputHeight" data-value-type="integer" data-options-type="options" data-validation-method="number_range" type="number" min="1" max="20">
+          <b>20</b>
+        <!-- <input name="sides" placeholder="20"  type="number" min="1" max="20"> -->
         </label>
 
         <label for="target">Target outcome<br>
-          <input name="target" value="target" placeholder="20" id="inputHeight" data-value-type="integer" data-options-type="options" data-validation-method="number_range" type="number" min="1" max="20">
+          <input name="target" placeholder="10" value="10" type="number" min="1" max="20">
           </label>
 
  
@@ -64,35 +65,37 @@
       <legend>
         <h2>optional</h2>
       </legend>
-      
+
         <label for="advantage">
-          <input name="advantage" type="checkbox" class="adv"
-          value="advantage" data-value-type="boolean"  onchange="checkAdvantage(this)">
+          <input name="advantage" type="checkbox" class="adv" onchange="checkAdvantage(this)"
+          >
           Advantage
         </label>
 
         <label for="luck">
-          <input name="luck" type="checkbox" class="adv"
-          value="luck" data-value-type="boolean"  onchange="checkAdvantage(this)">
+          <input name="luck" type="checkbox" class="adv" onchange="checkAdvantage(this)"
+          >
           Luck
         </label>
 
         <label for="elven">
-          <input name="elven" type="checkbox" class="adv" 
-          value="elven" data-value-type="boolean"  onchange="checkAdvantage(this)">
+          <input name="elven" type="checkbox" class="adv" onchange="checkAdvantage(this)"
+          >
           Elven accuracy
         </label>
 
         <label for="disadvantage">
-          <input name="disadvantage" type="checkbox" class="dis"
-          value="disadvantage" data-value-type="boolean"  onchange="checkAdvantage(this)">
+          <input name="disadvantage" type="checkbox" class="dis" onchange="checkAdvantage(this)"
+          >
           Disadvantage
         </label>
+
+        <!-- onchange="checkAdvantage(this)" -->
 
     </fieldset>
 
 <div class="button-area">
-  <button type="submit" class="pushable">
+  <button type="submit" onclick="return populateTable()" class="pushable">
     <span role="presentation" class="shadow"></span>
     <span role="presentation" class="edge"></span>
     <span class="frontbtn"> Roll dice! </span>
@@ -101,7 +104,7 @@
   </form>
 
 
-  <!-- <input name="sides" placeholder="20" id="inputHeight" data-value-type="integer" data-options-type="options" data-validation-method="number_range" type="number" min="1" max="20"> -->
+  <!-- <input name="sides" placeholder="20" data-value-type="integer" data-options-type="options" data-validation-method="number_range" type="number" min="1" max="20"> -->
 
 
 
@@ -109,6 +112,8 @@
   <!-- results -->
   <div class="flourish">&nbsp;</div>
   <h2>Results:</h2>
+
+  <p id="overview"></p>
 
   <table class="present-results">
     <thead>
