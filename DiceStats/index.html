@@ -14,22 +14,18 @@
       src="https://kit.fontawesome.com/2a2cd0823a.js"
       crossorigin="anonymous"
     ></script>
-    <script src="https://code.jquery.com/jquery-2.1.4.min.js" defer></script>
     <link rel="icon" href="favicon.ico" sizes="any" />
-
     <script src="skillCheck.js" charset="utf-8" defer></script>
-    <script src="displayData.js" charset="utf-8" defer></script>
-
 </head>
 
-  <body>
+<body>
 
 <!-- header section -->
 <header class="centred">
 <div class="forcontent">
   <h1>Dice Stats</h1>
   <div class="subheading" role="doc-subtitle">
-    easily visualise the probability of a desired outcome when rolling dice in D&D
+    easily visualise your chance of success when rolling dice in D&D
   </div>
   <div class="flourish">◇</div>
 </header>
@@ -40,74 +36,59 @@
 <div class="forcontent">
 
   <!-- input form -->
-  <form class="parameter-input" id="parameter-input">
-    <!-- left field -->
+  <form id="parameter-input">
+
     <fieldset>
       <legend>
         <h2>input parameters</h2>
       </legend>
-
 
         <label for="sides">Number of sides<br>
           <b>20</b>
         <!-- <input name="sides" placeholder="20"  type="number" min="1" max="20"> -->
         </label>
 
-        <label for="target">Target outcome<br>
+        <label for="target">Successful outcome<br>
           <input name="target" placeholder="10" value="10" type="number" min="1" max="20">
           </label>
 
- 
     </fieldset>
 
-    <!-- right field -->
     <fieldset>
       <legend>
         <h2>optional</h2>
       </legend>
 
         <label for="advantage">
-          <input name="advantage" type="checkbox" class="adv" onchange="checkAdvantage(this)"
-          >
+          <input name="advantage" type="checkbox" class="adv" onchange="checkAdvantage(this)">
           Advantage
         </label>
 
         <label for="luck">
-          <input name="luck" type="checkbox" class="adv" onchange="checkAdvantage(this)"
-          >
+          <input name="luck" type="checkbox" class="adv" onchange="checkAdvantage(this)">
           Luck
         </label>
 
         <label for="elven">
-          <input name="elven" type="checkbox" class="adv" onchange="checkAdvantage(this)"
-          >
+          <input name="elven" type="checkbox" class="adv" onchange="checkAdvantage(this)">
           Elven accuracy
         </label>
 
         <label for="disadvantage">
-          <input name="disadvantage" type="checkbox" class="dis" onchange="checkAdvantage(this)"
-          >
+          <input name="disadvantage" type="checkbox" class="dis" onchange="checkAdvantage(this)">
           Disadvantage
         </label>
-
-        <!-- onchange="checkAdvantage(this)" -->
 
     </fieldset>
 
 <div class="button-area">
-  <button type="submit" onclick="return populateTable()" class="pushable">
+  <button type="submit" class="pushable" onclick="return populateTable()">
     <span role="presentation" class="shadow"></span>
     <span role="presentation" class="edge"></span>
-    <span class="frontbtn"> Roll dice! </span>
+    <span class="frontbtn"> Roll 1 million times! </span>
   </button>
 </div>
   </form>
-
-
-  <!-- <input name="sides" placeholder="20" data-value-type="integer" data-options-type="options" data-validation-method="number_range" type="number" min="1" max="20"> -->
-
-
-
 
   <!-- results -->
   <div class="flourish">&nbsp;</div>
@@ -120,8 +101,8 @@
     <tr>
       <th>&nbsp;</th>
       <th>count</th>
-      <th>probability</th>
-      <th>x or higher</th>
+      <th>probability of result</th>
+      <th>result or higher</th>
     </tr>
     </thead>
     <tbody>
@@ -248,141 +229,24 @@
     <tbody>
   </table>
 
-
 </div>
-
 </main>
 
 <!-- footer section -->
 <footer class="centred">
 
-  
       <div class="flourish">◇</div>
       <div class="forcontent">
-    <div>Created by <a href="https://mb-malta.co.uk/mateusz/">Landsil</a></div>
+      <div>Created by <a href="https://mb-malta.co.uk/mateusz/">Landsil</a><br>
+      See <a href="https://github.com/Landsil/apps_script--rollDice">original spreadsheet version</a>
+    
+    </div>
     <div>
-      <a href="https://mb-malta.co.uk"><i class="fa-solid fa-envelope icon"></i></a>
+      <!-- <a href="https://mb-malta.co.uk"><i class="fa-solid fa-envelope icon"></i></a> -->
       <a href="https://github.com/Landsil"><i class="fa-brands fa-github icon"></i></a>
     </div>
 
   </div>
 </footer>
-
-    <!-- old -->
-    
-    <!-- <div class="container"> -->
-        
-        <!-- <form action="POST">
-            <legend>Roll Dice</legend>
-            <input type="text">
-            <label for="disadvantage"><input name="disadvantage" type="checkbox" value="badtime"></label>
-            <button type="submit" value="go">Roll dice</button>
-        </form> -->
-
-        <!-- <form>
-            <label><b>Enter a Message</b></label>
-            <input type="text" name="message" id="user_input">
-          <button type="submit" onclick="return showInput()">Roll dice</button>
-        </form>
-
-        <section id="contain-form">
-
-            <form>
-          <fieldset>
-            <legend>
-              <h2>Input your parameters</h2>
-            </legend>
-            <p>
-              <label for="reason">what can I do for you?</label>
-              <br />
-              <input
-                class="wide-input good-height"
-                type="text"
-                name="Reason"
-                list="reason"
-              />
-              <datalist id="reason">
-                <option>Work with me</option>
-                <option>Help me out</option>
-                <option>Feedback about this website</option>
-                <option>Check out this dad joke</option>
-              </datalist>
-            </p>
-            <p>
-              <label for="name">name</label>
-              <br />
-              <input
-                class="wide-input good-height"
-                id="name"
-                name="Name"
-                type="text"
-                placeholder="your name"
-                required
-              />
-            </p>
-
-            <p>
-              <label for="email">email</label>
-              <br />
-              <input
-                class="wide-input good-height"
-                id="email"
-                name="Email"
-                type="email"
-                placeholder="name@email.com"
-                required
-              />
-            </p>
-
-            <p>
-              <label for="message">your message</label>
-              <br />
-              <textarea
-                class="wide-input good-height"
-                id="message"
-                name="Message"
-                rows="6"
-                minlength="4"
-                maxlength="3000"
-                required
-              ></textarea>
-            </p>
-
-            <p class="checkbox-area">
-              <input
-                class="good-height"
-                type="checkbox"
-                id="human"
-                name="Human"
-                value="human"
-              />
-              <label for="human"
-                >&nbsp; I am a human, vegetable, or mineral</label
-              >
-            </p>
-
-            <p class="button-area right-slide">
-              <button type="reset" class="pushable">
-                <span role="presentation" class="shadow"></span>
-                <span role="presentation" class="edge"></span>
-                <span class="frontbtn"> Clear </span>
-              </button>
-
-              <button type="submit" name="Submit" class="pushable primary">
-                <span role="presentation" class="shadow"></span>
-                <span role="presentation" class="edge"></span>
-                <span class="frontbtn"> Send! </span>
-              </button>
-            </p>
-          </fieldset>
-        </form>
-        </section>
-
-        <section id="contain-results">
-          <h1>Results:</h1>
-        <p id="display"></p>
-</section> -->
-
-
-  </body>
+</body>
 </html>
