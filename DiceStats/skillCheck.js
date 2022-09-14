@@ -1,18 +1,33 @@
 //uncheck advantage fields on the form when a disadvantage is clicked and vice versa
-function checkAdvantage(obj) {
-  if (obj.classList.contains("dis")) {
-    var advs = document.getElementsByClassName("adv");
+function checkAdvantage(element) {
+  if (element.classList.contains("dis")) {
+    var allAdv = document.getElementsByClassName("adv");
 
-    for (var i = 0; i < advs.length; i++) {
-      advs[i].checked = false;
+    for (var i = 0; i < allAdv.length; i++) {
+      allAdv[i].checked = false;
     }
-  } else if (obj.classList.contains("adv")) {
-    var diss = document.getElementsByClassName("dis");
+  } else if (element.classList.contains("adv")) {
+    var allDis = document.getElementsByClassName("dis");
 
-    for (var i = 0; i < diss.length; i++) {
-      diss[i].checked = false;
+    for (var i = 0; i < allDis.length; i++) {
+      allDis[i].checked = false;
     }
   }
+
+
+
+  //ticking elven ticks luck as well
+  if (element.id === "elven"){
+    document.querySelector("#luck").checked = true
+  } 
+  
+  //unticking luck unticks elven
+  if (document.querySelector("#luck").checked === false) {
+    document.querySelector("#elven").checked = false
+  }
+
+  console.log("clicked: " + element.id + ", luck: " + document.querySelector("#luck").checked + ", elven: " + document.querySelector("#elven").checked)
+
 }
 
 const diceForm = document.getElementById("parameter-input");
