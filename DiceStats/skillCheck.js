@@ -14,19 +14,17 @@ function checkAdvantage(element) {
     }
   }
 
-
-
-  //ticking elven ticks luck as well
+  //ticking elven ticks advantage as well
   if (element.id === "elven"){
-    document.querySelector("#luck").checked = true
+    document.querySelector("#advantage").checked = true
   } 
   
-  //unticking luck unticks elven
-  if (document.querySelector("#luck").checked === false) {
+  //unticking advantage unticks elven
+  if (document.querySelector("#advantage").checked === false) {
     document.querySelector("#elven").checked = false
   }
 
-  console.log("clicked: " + element.id + ", luck: " + document.querySelector("#luck").checked + ", elven: " + document.querySelector("#elven").checked)
+  console.log("clicked: " + element.id + ", advantage: " + document.querySelector("#advantage").checked + ", elven: " + document.querySelector("#elven").checked)
 
 }
 
