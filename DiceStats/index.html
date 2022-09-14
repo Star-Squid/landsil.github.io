@@ -40,7 +40,7 @@
 
     <fieldset>
       <legend>
-        <h2>input parameters</h2>
+        <h2>skill check</h2>
       </legend>
 
         <label for="sides">Number of sides<br>
@@ -48,7 +48,7 @@
         <!-- <input name="sides" placeholder="20"  type="number" min="1" max="20"> -->
         </label>
 
-        <label for="target">Successful outcome<br>
+        <label for="target">DC<br>
           <input name="target" placeholder="10" value="10" type="number" min="1" max="20">
           </label>
 
@@ -92,17 +92,18 @@
 
   <!-- results -->
   <div class="flourish">&nbsp;</div>
-  <h2>Results:</h2>
+ 
 
-  <p id="overview"></p>
+  <!-- <p id="overview"></p> -->
 
   <table class="present-results">
+    <caption><h2>Results:</h2></caption>
     <thead>
     <tr>
       <th>&nbsp;</th>
       <th>count</th>
-      <th>probability of result</th>
-      <th>result or higher</th>
+      <th>probability</th>
+      <th>or more</th>
     </tr>
     </thead>
     <tbody>

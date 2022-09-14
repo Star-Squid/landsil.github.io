@@ -1,4 +1,4 @@
-//uncheck advantages when a disadvantage is clicked and vice versa
+//uncheck advantage fields on the form when a disadvantage is clicked and vice versa
 function checkAdvantage(obj) {
   if (obj.classList.contains("dis")) {
     var advs = document.getElementsByClassName("adv");
@@ -16,12 +16,12 @@ function checkAdvantage(obj) {
 }
 
 const diceForm = document.getElementById("parameter-input");
-const overview = document.getElementById("overview");
+// const overview = document.getElementById("overview");
 
 function populateTable() {
-  let formSummary = `sides:  <b>20</b>, target:  <b>${diceForm.target.value}</b>, advantage:  <b>${diceForm.advantage.checked}</b>, luck:  <b>${diceForm.luck.checked}</b>, elven accuracy:  <b>${diceForm.elven.checked}</b>, disadvantage:  <b>${diceForm.disadvantage.checked}</b>.`;
+  // let formSummary = `sides:  <b>20</b>, target:  <b>${diceForm.target.value}</b>, advantage:  <b>${diceForm.advantage.checked}</b>, luck:  <b>${diceForm.luck.checked}</b>, elven accuracy:  <b>${diceForm.elven.checked}</b>, disadvantage:  <b>${diceForm.disadvantage.checked}</b>.`;
 
-  overview.innerHTML = formSummary;
+  // overview.innerHTML = formSummary;
 
   webSkillCheck(
     diceForm.target.value,
@@ -105,20 +105,11 @@ function webSkillCheck(skillTarget, advantage, luck, elven, disadvantage) {
   // populate the table
   for (let r = 1; r < 21; r++) {
     sum = sum + r * results[r];
-
+    orMore = orMore - results[r - 1] / max;
 
     document.querySelector(".count.face" + r).innerText = results[r];
-    // roll_check.getRange("B" + (7 + r)).setValue(results[r])
-
     document.querySelector(".probability.face" + r).innerText =
-      ((results[r] / max) * 100).toFixed(2)  + "%";
-    // roll_check.getRange("C" + (7 + r)).setValue(results[r] / max)
-
-    orMore = orMore - results[r - 1] / max;
     document.querySelector(".higher.face" + r).innerText = (100 * orMore).toFixed(2) + "%";
-
-    // roll_check.getRange("D" + (7 + r)).setValue(orMore)
-    // roll_check.getRange("C8:D27").setNumberFormat("##.##%")
   }
 
   //highlight target row
