@@ -23,18 +23,18 @@
 
 <!-- header section -->
 <header class="centred">
-<div class="forcontent">
+<div class="forcontent" role="presentation">
   <h1>Dice Stats</h1>
   <div class="subheading" role="doc-subtitle">
     easily visualise your chance of success when rolling dice in D&D
   </div>
-  <div class="flourish">◇</div>
+  <div class="flourish" role="separator">◇</div>
 </header>
 
 
 <!-- main section -->
 <main class="centred">
-<div class="forcontent">
+<div class="forcontent" role="presentation">
 
   <!-- input form -->
   <form id="parameter-input">
@@ -82,17 +82,17 @@
 
     </fieldset>
 
-<div class="button-area">
+<div class="button-area" role="presentation">
   <button type="submit" class="pushable" onclick="return populateTable()">
     <span role="presentation" class="shadow"></span>
     <span role="presentation" class="edge"></span>
-    <span class="frontbtn"> Roll 1 million times! </span>
+    <span class="frontbtn"  role="button"> Roll 1 million times! </span>
   </button>
 </div>
   </form>
 
   <!-- results -->
-  <div class="flourish">&nbsp;</div>
+  <div class="flourish" role="separator">&nbsp;</div>
 
 
   <!-- <p id="overview"></p> -->
@@ -237,15 +237,15 @@
 <!-- footer section -->
 <footer class="centred">
 
-      <div class="flourish">◇</div>
-      <div class="forcontent">
-      <div>Created by <a href="https://mb-malta.co.uk/mateusz/">Landsil</a><br>
+      <div class="flourish" role="separator">◇</div>
+      <div class="forcontent" role="presentation">
+      <div role="presentation">Created by <a href="https://mb-malta.co.uk/mateusz/">Landsil</a><br>
       See <a href="https://github.com/Landsil/apps_script--rollDice">original spreadsheet version</a>
 
     </div>
-    <div>
+    <div role="presentation">
       <!-- <a href="https://mb-malta.co.uk"><i class="fa-solid fa-envelope icon"></i></a> -->
-      <a href="https://github.com/Landsil"><i class="fa-brands fa-github icon"></i></a>
+      <a href="https://github.com/Landsil" aria-label="Github page"><i class="fa-brands fa-github icon"></i></a>
     </div>
 
   </div>
