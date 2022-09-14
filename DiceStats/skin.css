@@ -78,10 +78,6 @@ header {
   padding: 2rem 0 0;
 }
 
-footer {
-  padding: 2rem 0;
-}
-
 .flourish {
   width: 95vw;
   border-top: thin solid var(--almostwhite);
@@ -137,12 +133,19 @@ a:active {
   border: solid 2px var(--accent);
 }
 
+footer {
+  padding: 2rem 0;
+}
+
 footer .forcontent {
-  width: 100vw;
-  max-width: 1000px;
+
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
+  align-items: center;
+
+  justify-self: center;
+
   gap: 2rem;
 }
 
