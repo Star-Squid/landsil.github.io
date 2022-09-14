@@ -42,7 +42,7 @@ It provides an extensive log of the results.
 function webSkillCheck(skillTarget, advantage, luck, elven, disadvantage) {
   const sides = 20;
 
-  let adv_b = advantage 
+  let adv_b = advantage
   let luck_b = luck
   let eAcc_b = elven
   let dis_b = disadvantage
@@ -105,9 +105,9 @@ function webSkillCheck(skillTarget, advantage, luck, elven, disadvantage) {
   // populate the table
   for (let r = 1; r < 21; r++) {
     sum = sum + r * results[r];
-    orMore = orMore - results[r - 1] / max;
-
+    
     document.querySelector(".count.face" + r).innerText = results[r];
+    orMore = orMore - results[r - 1] / max;
     document.querySelector(".probability.face" + r).innerText =
     document.querySelector(".higher.face" + r).innerText = (100 * orMore).toFixed(2) + "%";
   }
