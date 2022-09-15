@@ -121,9 +121,8 @@
       </label>
 
         <label for="target">
-          <br>
           <b>Target (T): </b>
-          <input name="target" value="10" type="number" min="0" max="1200">
+          <input name="target" id="target" value="10" type="number" min="0" max="1200">
         </label>
 
     
@@ -133,6 +132,17 @@
         <span role="presentation" class="edge"></span>
         <span class="frontbtn"  role="button"> Roll 1 million times </span>
       </button>
+    </div>
+    <div class="button-area" role="presentation">
+
+      <button type="submit" class="pushable fireball" onclick="return fireball()">
+        <span role="presentation" class="shadow"></span>
+        <span role="presentation" class="edge"></span>
+        <span class="frontbtn"  role="button"> Fireball! </span>
+      </button>
+      <div class="button-desc" role="doc-subtitle">
+        rolls 8d6 for T provided</div>
+
     </div>
     </fieldset>
       </form>
@@ -291,29 +301,24 @@
     <caption><h2>Damage roll results:</h2></caption>
    
     <tr>
-      <td>average roll</td>
-      <td id="avg-roll">&nbsp;</td>
+      <td class="table-number">average roll</td>
+      <td id="avg-roll"></td>
+      <td class="table-number">T is % of average</td>
+      <td id="t-of-av"></td>
     </tr>
     <tr>
-      <td>
-        max possible</td>
-      <td id="max-possible">&nbsp;</td>
-    </tr>
-    <tr>
-      <td>T or more in 1mil</td>
-      <td id="or-more-per">&nbsp;</td>
-    </tr>
-    <tr>
-      <td>T is % of av</td>
-      <td id="t-of-av">&nbsp;</td>
-    </tr>
-    <tr>
-      <td>T is % of max</td>
+      <td class="table-number">max possible</td>
+      <td id="max-possible"></td>
+      <td class="table-number">T is % of max</td>
       <td id="t-of-max"></td>
     </tr>
-      <td>% with T or more</td>
-      <td id="perc-t-or-more">&nbsp;</td>
+    <tr>
+      <td class="table-number">T or more in 1mil</td>
+      <td id="or-more-per"></td>
+      <td class="table-number">% with T or more</td>
+      <td id="perc-t-or-more"></td>
     </tr>
+
     <tbody>
   </table>
 

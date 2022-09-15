@@ -15,6 +15,12 @@ function populateDamageTable() {
   return false;
 }
 
+function fireball() {
+  webDmgRoll(0, 0, 8, 0, 0, 0, damageForm.target.value, diceForm.dc.value);
+
+  return false;
+}
+
 /**
 This function is responsible for just rolling for DMG and checking what was average and change to achieve target you specified.
 */

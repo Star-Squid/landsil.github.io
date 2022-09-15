@@ -170,7 +170,7 @@ footer .flourish {
 .tables {
   display: flex;
   flex-flow: row wrap;
-  gap: 1rem;
+  gap: 3rem;
   align-items: stretch;
   justify-content: center;
 }
@@ -196,10 +196,21 @@ fieldset {
   line-height: 1;
 }
 
+#target {
+  margin: 0.3rem 0;
+}
+
 .button-area {
   text-align: center;
   width: 100%;
   padding: 0 1rem 0;
+}
+
+.button-desc {
+  text-transform: uppercase;
+  color: #888;
+  font-size: 0.7rem;
+  text-align: center;
 }
 
 /* BUTTON */
@@ -254,6 +265,10 @@ button {
   transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
 }
 
+.fireball .frontbtn {
+  background: #b05041;
+}
+
 .pushable:hover {
   filter: brightness(110%);
 }
@@ -304,7 +319,8 @@ table caption {
 }
 
 .present-damage caption {
-  margin-bottom: 2rem;
+  margin-bottom: 2.3rem;
+  text-align: right;
 }
 
 table th {
@@ -316,7 +332,7 @@ table th {
   text-align: center;
 }
 
-.present-damage tr td:first-child {
+.present-damage td:nth-of-type(odd) {
   border: none;
   padding: 0.5rem;
   background: var(--white);
@@ -326,8 +342,8 @@ table th {
   text-align: right;
 }
 
-.present-damage tr td:nth-child(2) {
-  width: 6rem;
+.present-damage td:nth-of-type(even) {
+  min-width: 3rem;
 }
 
 table td {
