@@ -11,13 +11,12 @@ function populateDamageTable() {
     damageForm.target.value,
     diceForm.dc.value
   );
-
   return false;
 }
 
 function fireball() {
   webDmgRoll(0, 0, 8, 0, 0, 0, damageForm.target.value, diceForm.dc.value);
-
+  damageForm.d6.value = 8;
   return false;
 }
 
@@ -29,15 +28,7 @@ let combined = 0;
 
 function webDmgRoll(d4, d6, d8, d10, d12, d20, target, dc) {
   //const needed = dc;  // for "Combined chance"
-  let n_row = dc; //or (dc) + 7?
-
-  // Lets grab all the dices and handle any errors.
-  // var d4 = 0
-  // var d6 = 0
-  // var d8 = 0
-  // var d10 = 0
-  // var d12 = 0
-  // var d20 = 0
+  //let n_row = dc; //or (dc) + 7?
 
   var orMore = 0;
   var results = [];
@@ -101,9 +92,9 @@ function webDmgRoll(d4, d6, d8, d10, d12, d20, target, dc) {
 
   // Posting to table
 
-  document.getElementById("avg-roll").innerText = (resultsSum / checks).toFixed(
-    2
-  ); // Average of rolls
+  document.getElementById("avg-roll").innerText = (
+    resultsSum / checks
+  ).toFixed(); // Average of rolls
   document.getElementById("max-possible").innerText = maxPossible; // maxPossible roll
   document.getElementById("or-more-per").innerText = orMore.toFixed(); // Achieved target or more
   document.getElementById("t-of-av").innerText =
@@ -121,7 +112,7 @@ function webDmgRoll(d4, d6, d8, d10, d12, d20, target, dc) {
     (orMorePer * 100).toFixed(2) + "%";
 
   // let combined = Number(roll_check.getRange("D" + n_row).getValues()) * Number(roll_check.getRange("I19").getValues());
-  combined = Number(n_row) * Number(orMorePer);
+  combined = dc * orMorePer;
 }
 
 function rollDice(dices, sides) {

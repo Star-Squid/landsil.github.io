@@ -203,15 +203,14 @@ fieldset {
 .button-area {
   text-align: center;
   width: 100%;
-  padding: 0 1rem 0;
 }
 
-.button-desc {
+/* .button-desc {
   text-transform: uppercase;
   color: #888;
   font-size: 0.7rem;
   text-align: center;
-}
+} */
 
 /* BUTTON */
 button {
@@ -305,7 +304,6 @@ button {
 }
 
 table {
-  /* min-width: 30%;*/
   flex-grow: 2;
   border: none;
   border-collapse: collapse;
@@ -319,7 +317,7 @@ table caption {
 }
 
 .present-damage caption {
-  margin-bottom: 2.3rem;
+  margin-bottom: 2rem;
   text-align: right;
 }
 
@@ -328,10 +326,11 @@ table th {
   padding: 0.5rem;
   background: var(--white);
   color: var(--accent);
-  font-size: 1.2rem;
+  /* font-size: 1.2rem; */
   text-align: center;
 }
 
+/* descriptions */
 .present-damage td:nth-of-type(odd) {
   border: none;
   padding: 0.5rem;
@@ -342,6 +341,7 @@ table th {
   text-align: right;
 }
 
+/* results */
 .present-damage td:nth-of-type(even) {
   min-width: 3rem;
 }
