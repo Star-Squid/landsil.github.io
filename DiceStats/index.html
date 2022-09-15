@@ -17,6 +17,8 @@
     ></script>
     <link rel="icon" href="favicon.ico" sizes="any" />
     <script src="skillCheck.js" charset="utf-8" defer></script>
+    <script src="dmgRoll.js" charset="utf-8" defer></script>
+
 </head>
 
 <body>
@@ -36,29 +38,26 @@
 <main class="centred">
 <div class="forcontent" role="presentation">
 
+  <div class="forms">
   <!-- input form -->
   <form id="parameter-input">
-
-    <fieldset>
+<fieldset>
       <legend>
         <h2>skill check</h2>
       </legend>
 
-        <label for="sides">Number of sides<br>
-          <b>20</b>
+        <label for="sides">
+          <b>Number of sides: </b>
+          20
         <!-- <input name="sides" placeholder="20"  type="number" min="1" max="20"> -->
         </label>
 
-        <label for="target">DC<br>
-          <input name="target" placeholder="10" value="10" type="number" min="1" max="20">
+        <label for="dc">
+          <b>DC: </b>
+          <input name="dc" placeholder="10" value="10" type="number" min="1" max="20">
           </label>
 
-    </fieldset>
 
-    <fieldset>
-      <legend>
-        <h2>optional</h2>
-      </legend>
 
         <label for="advantage">
           <input name="advantage" id="advantage" type="checkbox" class="adv" onchange="checkAdvantage(this)">
@@ -80,25 +79,81 @@
           Disadvantage
         </label>
 
-    </fieldset>
 
 <div class="button-area" role="presentation">
   <button type="submit" class="pushable" onclick="return populateTable()">
     <span role="presentation" class="shadow"></span>
     <span role="presentation" class="edge"></span>
-    <span class="frontbtn"  role="button"> Roll 1 million times! </span>
+    <span class="frontbtn"  role="button"> Roll 1 million times </span>
   </button>
 </div>
+</fieldset>
   </form>
+
+  <form id="damage-roll">
+    <fieldset>
+      <legend>
+        <h2>damage roll</h2>
+      </legend>
+
+      <label for="d4">
+        <input name="d4" value="0" type="number" min="0" max="20"> d4
+      </label>
+
+      <label for="d6">
+        <input name="d6" value="0" type="number" min="0" max="20"> d6
+      </label>
+
+      <label for="d8">
+        <input name="d8" value="0" type="number" min="0" max="20"> d8
+      </label>
+
+      <label for="d10">
+        <input name="d10" value="0" type="number" min="0" max="20"> d10
+      </label>
+
+      <label for="d12">
+        <input name="d12" value="0" type="number" min="0" max="20"> d12
+      </label>
+
+      <label for="d20">
+        <input name="d20" value="0" type="number" min="0" max="20"> d20
+      </label>
+
+        <label for="target">
+          <br>
+          <b>Target (T): </b>
+          <input name="target" value="10" type="number" min="0" max="1200">
+        </label>
+
+    
+    <div class="button-area" role="presentation">
+      <button type="submit" class="pushable" onclick="return populateDamageTable()">
+        <span role="presentation" class="shadow"></span>
+        <span role="presentation" class="edge"></span>
+        <span class="frontbtn"  role="button"> Roll 1 million times </span>
+      </button>
+    </div>
+    </fieldset>
+      </form>
+
+      <!-- <div class="button-area" role="presentation">
+        <button type="submit" class="pushable" onclick="return populateDamageTable(), populateTable()">
+          <span role="presentation" class="shadow"></span>
+          <span role="presentation" class="edge"></span>
+          <span class="frontbtn"  role="button"> Roll both </span>
+        </button>
+      </div> -->
+
+  </div>
 
   <!-- results -->
   <div class="flourish" role="separator">&nbsp;</div>
 
-
-  <!-- <p id="overview"></p> -->
+<div class="tables">
 
   <table class="present-results">
-    <caption><h2>Results:</h2></caption>
+    <caption><h2>Skill check results:</h2></caption>
     <thead>
     <tr>
       <th>&nbsp;</th>
@@ -228,9 +283,41 @@
       <td class="probability face20"></td>
       <td class="higher face20"></td>
     </tr>
+
     <tbody>
   </table>
 
+  <table class="present-damage">
+    <caption><h2>Damage roll results:</h2></caption>
+   
+    <tr>
+      <td>average roll</td>
+      <td class="avg-roll">&nbsp;</td>
+    </tr>
+    <tr>
+      <td>
+        max possible</td>
+      <td class="max-possible">&nbsp;</td>
+    </tr>
+    <tr>
+      <td>T or more in 1mil</td>
+      <td class="or-more-per">&nbsp;</td>
+    </tr>
+    <tr>
+      <td>T is % of av</td>
+      <td class="t-of-av">&nbsp;</td>
+    </tr>
+    <tr>
+      <td>T is % of max</td>
+      <td class="t-of-max"></td>
+    </tr>
+      <td>% with T or more</td>
+      <td class="perc-t-or-more">&nbsp;</td>
+    </tr>
+    <tbody>
+  </table>
+
+</div>
 </div>
 </main>
 

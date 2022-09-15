@@ -46,7 +46,7 @@ html {
 body {
   height: 100vh;
   width: 100vw;
-  overflow-x:hidden;
+  overflow-x: hidden;
   color: var(--black);
   text-align: justify;
   text-justify: inter-word;
@@ -55,7 +55,10 @@ body {
     Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   background-image: var(--gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -138,7 +141,6 @@ footer {
 }
 
 footer .forcontent {
-
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
@@ -164,10 +166,19 @@ footer .flourish {
   margin: 2rem;
 } */
 
+.forms,
+.tables {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1rem;
+  align-items: stretch;
+  justify-content: center;
+}
+
 /* FORM */
 form {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column nowrap;
   gap: 1rem;
   align-items: stretch;
   justify-content: center;
@@ -178,7 +189,7 @@ fieldset {
   display: flex;
   flex-grow: 1;
   flex-flow: column nowrap;
-  justify-content: space-around;
+  justify-content: space-between;
   gap: 1rem;
   padding: 1rem;
   align-items: flex-start;
@@ -273,20 +284,30 @@ button {
 
 /* TABLE */
 
-.present-results {
-  /* width: 100%;
-  max-width: 950px; */
+.tables {
+  align-items: flex-start;
+  justify-content: stretch;
+}
+
+table {
+  /* min-width: 30%;*/
+  flex-grow: 2;
   border: none;
   border-collapse: collapse;
   padding: 5px;
 }
 
-.present-results caption {
+table caption {
   padding-top: 1rem;
   text-align: left;
+  white-space: nowrap;
 }
 
-.present-results th {
+.present-damage caption {
+  margin-bottom: 2rem;
+}
+
+table th {
   border: none;
   padding: 0.5rem;
   background: var(--white);
@@ -295,17 +316,31 @@ button {
   text-align: center;
 }
 
-.present-results td {
+.present-damage tr td:first-child {
+  border: none;
+  padding: 0.5rem;
+  background: var(--white);
+  color: var(--accent);
+  text-align: center;
+  font-weight: bold;
+  text-align: right;
+}
+
+.present-damage tr td:nth-child(2) {
+  width: 6rem;
+}
+
+table td {
   border: 1px solid var(--almostwhite);
   padding: 0.2rem 0.4rem;
   text-align: center;
 }
 
-.present-results tr:nth-of-type(even) {
+table tr:nth-of-type(even) {
   background-color: var(--lightish);
 }
 
-.present-results tr:hover {
+table tr:hover {
   background-color: #b0d0c5dd;
 }
 

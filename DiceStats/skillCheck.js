@@ -24,20 +24,14 @@ function checkAdvantage(element) {
     document.querySelector("#elven").checked = false
   }
 
-  console.log("clicked: " + element.id + ", advantage: " + document.querySelector("#advantage").checked + ", elven: " + document.querySelector("#elven").checked)
-
+  // console.log("clicked: " + element.id + ", advantage: " + document.querySelector("#advantage").checked + ", elven: " + document.querySelector("#elven").checked)
 }
 
 const diceForm = document.getElementById("parameter-input");
-// const overview = document.getElementById("overview");
 
 function populateTable() {
-  // let formSummary = `sides:  <b>20</b>, target:  <b>${diceForm.target.value}</b>, advantage:  <b>${diceForm.advantage.checked}</b>, luck:  <b>${diceForm.luck.checked}</b>, elven accuracy:  <b>${diceForm.elven.checked}</b>, disadvantage:  <b>${diceForm.disadvantage.checked}</b>.`;
-
-  // overview.innerHTML = formSummary;
-
   webSkillCheck(
-    diceForm.target.value,
+    diceForm.dc.value,
     diceForm.advantage.checked,
     diceForm.luck.checked,
     diceForm.elven.checked,
