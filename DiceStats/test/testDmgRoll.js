@@ -3,6 +3,9 @@ const assert = require("chai").assert;
 const webDmgRoll = require("../script/dmgRoll.js");
 
 describe("webDmgRoll", function () {
+  it("returns an object", function () {
+    assert.isObject(webDmgRoll());
+  });
   it("returns maxPossible adding max possible results of chosen dice", function () {
     assert.equal(webDmgRoll(0, 0, 3, 0, 0, 0, 10, 5).maxPossible, 24);
     assert.equal(webDmgRoll(0, 2, 3, 0, 0, 0, 10, 5).maxPossible, 36);
