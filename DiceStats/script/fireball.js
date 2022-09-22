@@ -1,5 +1,5 @@
-const webDmgRoll = require("./dmgRoll");
-const populateDamageTable = require("./populateDmgTable");
+import webDmgRoll from "./dmgRoll";
+import populateDamageTable from "./populateDmgTable";
 
 const damageForm = document.getElementById("damage-roll");
 const diceForm = document.getElementById("parameter-input");
@@ -13,4 +13,4 @@ function fireball() {
   }
 }
 
-module.exports = fireball;
+export default fireball;

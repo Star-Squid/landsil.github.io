@@ -1,4 +1,4 @@
-const rollDice = require("./rollDice.js");
+import rollDice from "./rollDice.js";
 
 /**
 This function is responsible for just rolling for DMG and checking what was average and change to achieve target you specified.
@@ -8,6 +8,7 @@ function webDmgRoll(d4, d6, d8, d10, d12, d20, target, dc) {
   let orMore = 0;
   let results = [];
   let resultsSum = 0;
+  let rollSum //added here cause maybe i deleted it by mistake
 
   const checks = 1000000;
   let maxPossible = d4 * 4 + d6 * 6 + d8 * 8 + d10 * 10 + d12 * 12 + d20 * 20;
@@ -67,31 +68,27 @@ function webDmgRoll(d4, d6, d8, d10, d12, d20, target, dc) {
 
   // These results we need for posting to the table:
   // 1. Average of rolls
-  let avgRoll = (resultsSum / checks).toFixed();
+  let avgRoll = resultsSum / checks;
 
-  // 2. Max possible roll (coerced to string just for consistency)
-  maxPossible = maxPossible.toFixed();
+  // 2. Max possible roll 
 
-  //3. T or more per
-  // if (orMore === 0) {
-  //   let orMorePer = 0;
-  // } else {
-  //   let orMorePer = orMore / checks;
-  // }
+  //3. T or more perAchieved target or more
 
+  let orMorePer
   !orMore ? (orMorePer = 0) : (orMorePer = orMore / checks);
 
-  orMorePer = orMore.toFixed(); // Achieved target or more
+  //orMorePer = orMore; // !was this for something?
 
   //4. t of average as percentage
-  let tOfAv = ((target / (resultsSum / checks)) * 100).toFixed(2) + "%";
+  let tOfAv = target / (resultsSum / checks);
 
   //5. t of max as percentage
-  let tOfMax = ((target / maxPossible) * 100).toFixed(2) + "%";
+  let tOfMax = target / maxPossible;
 
   //6. Percent T or more
-  let percTOrMore = (orMorePer * 100).toFixed(2) + "%";
-//! VERY WEIRD RESULT? ('835929.00%')
+  let percTOrMore = orMorePer
+//! VERY WEIRD RESULT when percentegized ('835929.00%')
+//!shouldn't it do sth interesting?
 
   //7. combined
   let combined = dc * orMorePer;
@@ -107,4 +104,4 @@ function webDmgRoll(d4, d6, d8, d10, d12, d20, target, dc) {
   };
 }
 
-module.exports = webDmgRoll;
+export default webDmgRoll;

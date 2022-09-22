@@ -16,8 +16,9 @@
       crossorigin="anonymous"
     ></script>
     <link rel="icon" href="favicon.ico" sizes="any" />
-    <script src="script/interact.js" charset="utf-8" defer></script>
-    <script src="script/populateDmgTable.js" charset="utf-8" defer></script>
+    <script src="main.js"  charset="utf-8" defer></script>
+    <script type="module" src="script/populateDmgTable.js" charset="utf-8" defer></script>
+    <script type="module" src="script/populateSkillTable.js" charset="utf-8" defer></script>
 
 </head>
 
@@ -81,8 +82,9 @@
 
 
 <div class="button-area" role="presentation">
-  <button type="submit" class="pushable" onclick="return populateTable()">
-    <span role="presentation" class="shadow"></span>
+  <!-- <button type="submit" class="pushable" onclick="return populateTable()"> -->
+  <button type="submit" class="pushable" id="skill-button">
+      <span role="presentation" class="shadow"></span>
     <span role="presentation" class="edge"></span>
     <span class="frontbtn"  role="button"> Roll 1 million times </span>
   </button>
@@ -127,14 +129,16 @@
 
     
     <div class="button-area" role="presentation">
-      <button type="submit" class="pushable" onclick="return populateDamageTable()">
-        <span role="presentation" class="shadow"></span>
+      <!-- <button type="submit" class="pushable" onclick="return populateDamageTable()"> -->
+      <button type="submit" class="pushable" id="damage-button">
+          <span role="presentation" class="shadow"></span>
         <span role="presentation" class="edge"></span>
         <span class="frontbtn"  role="button"> Roll 1 million times </span>
       </button>
 
-      <button type="submit" class="pushable fireball" onclick="return fireball()">
-        <span role="presentation" class="shadow"></span>
+      <!-- <button type="submit" class="pushable fireball" onclick="return fireball()"> -->
+      <button type="submit" class="pushable fireball" id="fireball-button">
+          <span role="presentation" class="shadow"></span>
         <span role="presentation" class="edge"></span>
         <span class="frontbtn"  role="button"> Fireball! </span>
       </button>
@@ -329,13 +333,14 @@
 
       <div class="flourish" role="separator">◇</div>
       <div class="forcontent" role="presentation">
-      <div role="presentation">Backend by <a href="https://mb-malta.co.uk/mateusz/">Landsil</a>, frontend by <a href="https://star-squid.github.io">Star Squid</a><br>
-      See <a href="https://github.com/Landsil/apps_script--rollDice">original spreadsheet version</a>
+      <div role="presentation">Created by <a href="https://mb-malta.co.uk/mateusz/">Landsil</a> (backend) and <a href="https://star-squid.github.io">Star Squid</a> (frontend)<br>
+        See <a href="https://github.com/Landsil/landsil.github.io/tree/master/DiceStats">the code</a><br>
+        See <a href="https://github.com/Landsil/apps_script--rollDice">the original spreadsheet version</a>
 
     </div>
     <div role="presentation">
       <!-- <a href="https://mb-malta.co.uk"><i class="fa-solid fa-envelope icon"></i></a> -->
-      <a href="https://github.com/Landsil" aria-label="Github page"><i class="fa-brands fa-github icon"></i></a>
+      <!-- <a href="https://github.com/Landsil" aria-label="Github page"><i class="fa-brands fa-github icon"></i></a> -->
     </div>
 
   </div>

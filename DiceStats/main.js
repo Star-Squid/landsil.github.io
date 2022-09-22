@@ -1,4 +1,4 @@
-const diceForm = document.getElementById("parameter-input");
+const skillForm = document.getElementById("parameter-input");
 
 //uncheck advantage fields on the form when a disadvantage is clicked and vice versa
 function checkAdvantage(element) {
@@ -31,19 +31,19 @@ function checkAdvantage(element) {
 
 // function populateTable() {
 //   webSkillCheck(
-//     diceForm.dc.value,
-//     diceForm.advantage.checked,
-//     diceForm.luck.checked,
-//     diceForm.elven.checked,
-//     diceForm.disadvantage.checked
+//     skillForm.dc.value,
+//     skillForm.advantage.checked,
+//     skillForm.luck.checked,
+//     skillForm.elven.checked,
+//     skillForm.disadvantage.checked
 //   );
 // //don't just do this, use return values
 //   return false;
 // }
 
 //highlight target row
-function highlightTarget(skillTarget) {
-  document
-    .querySelector("tr:nth-child(" + skillTarget + ")")
-    .classList.add("highlighted");
-}
+// function highlightTarget(skillTarget) {
+//   document
+//     .querySelector("tr:nth-child(" + skillTarget + ")")
+//     .classList.add("highlighted");
+// }

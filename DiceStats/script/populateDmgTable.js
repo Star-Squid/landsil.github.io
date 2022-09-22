@@ -1,9 +1,17 @@
-const webDmgRoll = require("/dmgRoll.js");
+import webDmgRoll from "./dmgRoll.js";
+import percentegized from "../script/percentegized.js";
 
 const damageForm = document.getElementById("damage-roll");
-const diceForm = document.getElementById("parameter-input");
+const skillForm = document.getElementById("parameter-input");
 
-function populateDamageTable() {
+const damageButton = document.getElementById("damage-button");
+damageButton.addEventListener("click", populateDamageTable, false);
+
+function populateDamageTable(event) {
+  event.preventDefault();
+
+  console.log("dmg");
+
   const rollResults = webDmgRoll(
     damageForm.d4.value,
     damageForm.d6.value,
@@ -12,17 +20,18 @@ function populateDamageTable() {
     damageForm.d12.value,
     damageForm.d20.value,
     damageForm.target.value,
-    diceForm.dc.value
+    skillForm.dc.value
   );
 
-  // rollResults returns avgRoll, maxPossible, orMorePer, tOfAv, tOfMax, percTOrMore, combined
+  //webDmgRoll returns {avgRoll, maxPossible, orMorePer, tOfAv,    tOfMax, percTOrMore, combined}
   document.getElementById("avg-roll").innerText = rollResults.avgRoll;
   document.getElementById("max-possible").innerText = rollResults.maxPossible;
   document.getElementById("or-more-per").innerText = rollResults.orMorePer;
   document.getElementById("t-of-av").innerText = rollResults.tOfAv;
   document.getElementById("t-of-max").innerText = rollResults.tOfMax;
+  document.getElementById("perc-t-or-more").innerText = rollResults.percTOrMore;
 
   return false;
 }
 
-module.exports = populateDamageTable;
+export default populateDamageTable;

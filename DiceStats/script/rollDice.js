@@ -6,4 +6,4 @@ function rollDice(dices, sides) {
   return rollSum;
 }
 
-module.exports = rollDice;
+export default rollDice;

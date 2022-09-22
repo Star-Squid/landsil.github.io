@@ -1,6 +1,6 @@
 // const assert = require('assert'); //default
 const assert = require("chai").assert;
-const webDmgRoll = require("../script/dmgRoll.js");
+const webDmgRoll = require("../script/dmgRoll.js").default;
 
 describe("webDmgRoll", function () {
   it("returns an object", function () {

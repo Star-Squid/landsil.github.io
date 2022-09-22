@@ -66,29 +66,33 @@ function webSkillCheck(skillTarget, advantage, luck, elven, disadvantage) {
     }
   }
 
-  // populate the table
+  //Data needed for the table:
+  //1. Count
+  const tableCount = [];
+
+  //2. Probability
+  const tableProbability = [];
+
+  //3. Or more
+  const tableOrMore = [];
+
+  //Fill the arrays with 20 results each
   for (let r = 1; r < 21; r++) {
     sum = sum + r * results[r];
-
-    document.querySelector(".count.face" + r).innerText = results[r];
     orMore = orMore - results[r - 1] / max;
-    document.querySelector(".probability.face" + r).innerText =
-      document.querySelector(".higher.face" + r).innerText =
-        (100 * orMore).toFixed(2) + "%";
+
+    tableCount.push(results[r]);
+    tableProbability.push(sum); //idk?
+    tableOrMore.push(orMore);
   }
 
+  //average = sum / max; //do we need this for anything?
 
-
-  average = sum / max;
-
-  return [] //return something that can be used in interact.js
+  return {
+    count: tableCount,
+    probability: tableProbability,
+    orMore: tableOrMore,
+  };
 }
 
-function extraSpecial (num){
-  return num+2
-}
-
-module.exports = {
-  webSkillCheck,
-  extraSpecial
-};
+export default webSkillCheck;
