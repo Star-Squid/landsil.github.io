@@ -1,6 +1,6 @@
 // const assert = require('assert'); //default
-const assert = require("chai").assert;
-const webDmgRoll = require("../script/dmgRoll.js").default;
+import { assert } from "chai";
+import webDmgRoll from "../script/dmgRoll.js";
 
 describe("webDmgRoll", function () {
   it("returns an object", function () {

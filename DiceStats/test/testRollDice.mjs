@@ -1,5 +1,5 @@
-const assert = require("chai").assert;
-const rollDice = require("../script/rollDice");
+import { assert } from "chai";
+import rollDice from "../script/rollDice";
 
 describe("rollDice", () => {
   it("returns a random result possible for a number and type of dice specified", () => {

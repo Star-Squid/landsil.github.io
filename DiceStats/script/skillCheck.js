@@ -78,11 +78,11 @@ function webSkillCheck(skillTarget, advantage, luck, elven, disadvantage) {
 
   //Fill the arrays with 20 results each
   for (let r = 1; r < 21; r++) {
-    sum = sum + r * results[r];
+    sum = sum + r * results[r]; //we're not using this?
     orMore = orMore - results[r - 1] / max;
 
     tableCount.push(results[r]);
-    tableProbability.push(sum); //idk?
+    tableProbability.push(results[r] / max);
     tableOrMore.push(orMore);
   }
 

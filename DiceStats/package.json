@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Brute force dice roll statistics for Dungeons and Dragons 5e",
   "main": "main.js",
+  "type": "module",
   "directories": {
     "test": "mocha"
   },

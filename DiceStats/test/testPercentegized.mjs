@@ -1,5 +1,5 @@
-const assert = require("chai").assert;
-const percentegized = require("../script/percentegized");
+import { assert } from "chai";
+import percentegized from "../script/percentegized";
 
 describe("percentegized", ()=>{
     it("converts a number under 1 to percent", ()=>{

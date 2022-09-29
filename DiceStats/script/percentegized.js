@@ -1,11 +1,9 @@
 //present a floating-point number as a percentage
-//unless the result would be over 100%
+//or if it's over 100%, round it down to 2 decimal points
 
-function percentegized(num) {
+export default function percentegized(num) {
   if (num > 1) {
     return num.toFixed(2);
   }
   return (100 * num).toFixed() + "%";
 }
-
-export default percentegized;

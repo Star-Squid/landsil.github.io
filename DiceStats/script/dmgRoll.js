@@ -8,7 +8,8 @@ function webDmgRoll(d4, d6, d8, d10, d12, d20, target, dc) {
   let orMore = 0;
   let results = [];
   let resultsSum = 0;
-  let rollSum //added here cause maybe i deleted it by mistake
+  let rollSum; //added here cause maybe i deleted it by mistake
+  let orMorePer;
 
   const checks = 1000000;
   let maxPossible = d4 * 4 + d6 * 6 + d8 * 8 + d10 * 10 + d12 * 12 + d20 * 20;
@@ -70,25 +71,24 @@ function webDmgRoll(d4, d6, d8, d10, d12, d20, target, dc) {
   // 1. Average of rolls
   let avgRoll = resultsSum / checks;
 
-  // 2. Max possible roll 
+  // 2. Max possible roll
+  //maxPossible
 
-  //3. T or more perAchieved target or more
+  //3. Achieved target or more
+  //orMore
 
-  let orMorePer
-  !orMore ? (orMorePer = 0) : (orMorePer = orMore / checks);
-
-  //orMorePer = orMore; // !was this for something?
-
-  //4. t of average as percentage
+  //4. t of average
   let tOfAv = target / (resultsSum / checks);
 
   //5. t of max as percentage
   let tOfMax = target / maxPossible;
 
   //6. Percent T or more
-  let percTOrMore = orMorePer
-//! VERY WEIRD RESULT when percentegized ('835929.00%')
-//!shouldn't it do sth interesting?
+  if (orMore === 0) {
+    orMorePer = 0;
+  } else {
+    orMorePer = orMore / checks;
+  }
 
   //7. combined
   let combined = dc * orMorePer;
@@ -96,10 +96,10 @@ function webDmgRoll(d4, d6, d8, d10, d12, d20, target, dc) {
   return {
     avgRoll: avgRoll,
     maxPossible: maxPossible,
-    orMorePer: orMorePer,
+    orMorePer: orMore,
     tOfAv: tOfAv,
     tOfMax: tOfMax,
-    percTOrMore: percTOrMore,
+    percTOrMore: orMorePer,
     combined: combined,
   };
 }

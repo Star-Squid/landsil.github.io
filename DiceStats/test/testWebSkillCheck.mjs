@@ -1,5 +1,5 @@
-const assert = require("chai").assert;
-const webSkillCheck = require("../script/skillCheck");
+import { assert } from "chai";
+import webSkillCheck from "../script/skillCheck";
 
 describe("webSkillCheck", ()=>{
     it("returns an object of 3 20-item arrays", ()=>{
