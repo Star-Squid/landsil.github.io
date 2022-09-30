@@ -1,16 +1,43 @@
-import webDmgRoll from "./dmgRoll";
-import populateDamageTable from "./populateDmgTable";
+import webDmgRoll from "./dmgRoll.js";
+import percentegized from "../script/percentegized.js";
 
 const damageForm = document.getElementById("damage-roll");
-const diceForm = document.getElementById("parameter-input");
+const skillForm = document.getElementById("parameter-input");
 
-function fireball() {
-  function populateDamageTable() {
-    webDmgRoll(0, 0, 8, 0, 0, 0, damageForm.target.value, diceForm.dc.value);
+const fireballButton = document.getElementById("fireball-button");
+fireballButton.addEventListener("click", fireball, false);
 
-    damageForm.d6.value = 8;
-    return false;
-  }
+function fireball(event) {
+  event.preventDefault();
+
+  console.log("Damage table populated - fireball");
+
+  const rollResults = webDmgRoll(
+    damageForm.d4.value,
+    damageForm.d6.value,
+    damageForm.d8.value,
+    damageForm.d10.value,
+    damageForm.d12.value,
+    damageForm.d20.value,
+    damageForm.target.value,
+    skillForm.dc.value
+  );
+
+  //webDmgRoll returns {avgRoll, maxPossible, orMorePer, tOfAv,    tOfMax, percTOrMore, combined}
+  document.getElementById("avg-roll").innerText = rollResults.avgRoll.toFixed();
+  document.getElementById("max-possible").innerText = rollResults.maxPossible;
+  document.getElementById("or-more-per").innerText = rollResults.orMorePer;
+  document.getElementById("t-of-av").innerText = percentegized(
+    rollResults.tOfAv
+  );
+  document.getElementById("t-of-max").innerText = percentegized(
+    rollResults.tOfMax
+  );
+  document.getElementById("perc-t-or-more").innerText = percentegized(
+    rollResults.percTOrMore
+  );
+
+  return false;
 }
 
 export default fireball;
