@@ -5,5 +5,5 @@ export default function percentegized(num) {
   if (num > 1) {
     return num.toFixed(2);
   }
-  return (100 * num).toFixed() + "%";
+  return (100 * num).toFixed(2) + "%";
 }

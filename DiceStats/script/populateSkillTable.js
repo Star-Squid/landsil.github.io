@@ -5,14 +5,18 @@ const skillForm = document.getElementById("parameter-input");
 const skillButton = document.getElementById("skill-button");
 skillButton.addEventListener("click", populateSkillTable, false);
 
-// function dummy (event){
-//   event.preventDefault()
-//   console.log("dummy")
-// }
+//remove existing highlight box from table rows
+function clearHighlight() {
+  const rows = document.querySelectorAll(".present-results tr");
+  for (let i = 0; i < rows.length; i++) {
+    rows[i].classList.remove("highlighted");
+  }
+}
 
 function populateSkillTable(event) {
   event.preventDefault();
-  console.log("Skill table populated");
+
+  clearHighlight();
 
   const skillResults = webSkillCheck(
     skillForm.dc.value,
@@ -40,6 +44,8 @@ function populateSkillTable(event) {
   document
     .querySelector("tr:nth-child(" + skillForm.dc.value + ")")
     .classList.add("highlighted");
+
+  console.log("Skill table populated");
 
   return false;
 }

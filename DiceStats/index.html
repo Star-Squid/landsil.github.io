@@ -18,7 +18,8 @@
     <link rel="icon" href="favicon.ico" sizes="any" />
     <script src="main.js"  charset="utf-8" defer></script>
     <script type="module" src="script/populateDmgTable.js" charset="utf-8" defer></script>
-    <script type="module" src="script/populateSkillTable.js" charset="utf-8" defer></script>
+    <script type="module" src="script/populateSkillTable.js" charset="utf-8" defer></script>    
+    <script type="module" src="script/fireball.js" charset="utf-8" defer></script>
 
 </head>
 
@@ -39,7 +40,7 @@
 <main class="centred">
 <div class="forcontent" role="presentation">
 
-  <div class="forms">
+  <div class="forms" role="presentation">
   <!-- input form -->
   <form id="parameter-input">
 <fieldset>
@@ -50,15 +51,12 @@
         <label for="sides">
           <b>Number of sides: </b>
           20
-        <!-- <input name="sides" placeholder="20"  type="number" min="1" max="20"> -->
         </label>
 
         <label for="dc">
           <b>DC: </b>
           <input name="dc" placeholder="10" value="10" type="number" min="1" max="20">
           </label>
-
-
 
         <label for="advantage">
           <input name="advantage" id="advantage" type="checkbox" class="adv" onchange="checkAdvantage(this)">
@@ -82,7 +80,7 @@
 
 
 <div class="button-area" role="presentation">
-  <!-- <button type="submit" class="pushable" onclick="return populateTable()"> -->
+
   <button type="submit" class="pushable" id="skill-button">
       <span role="presentation" class="shadow"></span>
     <span role="presentation" class="edge"></span>
@@ -129,41 +127,29 @@
 
     
     <div class="button-area" role="presentation">
-      <!-- <button type="submit" class="pushable" onclick="return populateDamageTable()"> -->
       <button type="submit" class="pushable" id="damage-button">
           <span role="presentation" class="shadow"></span>
         <span role="presentation" class="edge"></span>
         <span class="frontbtn"  role="button"> Roll 1 million times </span>
       </button>
       
-
-      <!-- <button type="submit" class="pushable fireball" onclick="return fireball()"> -->
       <button type="submit" class="pushable fireball" id="fireball-button">
-          <span role="presentation" class="shadow"></span>
-        <span role="presentation" class="edge"></span>
-        <span class="frontbtn"  role="button"> Fireball! </span>
-      </button>
-      <!-- <div class="button-desc" role="doc-subtitle">
-        rolls 8d6 for T provided</div> -->
+        <span role="presentation" class="shadow"></span>
+      <span role="presentation" class="edge"></span>
+      <span class="frontbtn"  role="button"> Fireball! </span>
+    </button>
+    
 
     </div>
     </fieldset>
       </form>
-
-      <!-- <div class="button-area" role="presentation">
-        <button type="submit" class="pushable" onclick="return populateDamageTable(), populateTable()">
-          <span role="presentation" class="shadow"></span>
-          <span role="presentation" class="edge"></span>
-          <span class="frontbtn"  role="button"> Roll both </span>
-        </button>
-      </div> -->
 
   </div>
 
   <!-- results -->
   <div class="flourish" role="separator">&nbsp;</div>
 
-<div class="tables">
+<div class="tables" role="presentation">
 
   <table class="present-results">
     <caption><h2>Skill check results:</h2></caption>
@@ -301,6 +287,7 @@
   </table>
 
   <table class="present-damage">
+   
     <caption><h2>Damage roll results:</h2></caption>
    
     <tr>

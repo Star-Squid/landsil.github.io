@@ -10,8 +10,6 @@ damageButton.addEventListener("click", populateDamageTable, false);
 function populateDamageTable(event) {
   event.preventDefault();
 
-  console.log("Damage table populated");
-
   const rollResults = webDmgRoll(
     damageForm.d4.value,
     damageForm.d6.value,
@@ -24,7 +22,8 @@ function populateDamageTable(event) {
   );
 
   //webDmgRoll returns {avgRoll, maxPossible, orMorePer, tOfAv,    tOfMax, percTOrMore, combined}
-  document.getElementById("avg-roll").innerText = rollResults.avgRoll.toFixed();
+  document.getElementById("avg-roll").innerText =
+    rollResults.avgRoll.toFixed(2);
   document.getElementById("max-possible").innerText = rollResults.maxPossible;
   document.getElementById("or-more-per").innerText = rollResults.orMorePer;
   document.getElementById("t-of-av").innerText = percentegized(
@@ -36,6 +35,8 @@ function populateDamageTable(event) {
   document.getElementById("perc-t-or-more").innerText = percentegized(
     rollResults.percTOrMore
   );
+
+  console.log("Damage table populated");
 
   return false;
 }
