@@ -1,3 +1,16 @@
+//make tabs active or inactive whenn clicked
+const tabs = document.querySelectorAll(".tab");
+
+tabs.forEach(tab => tab.addEventListener("click", function(){activateTab(tab)}));
+
+function activateTab(target){
+  console.log("activated: " + target)
+  tabs.forEach(tab => tab.classList.remove("active"));
+  target.classList.add("active")
+};
+
+
+
 const skillForm = document.getElementById("parameter-input");
 
 //uncheck advantage fields on the form when a disadvantage is clicked and vice versa

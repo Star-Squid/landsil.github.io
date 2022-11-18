@@ -36,6 +36,8 @@ html {
     #61e9c3
   );
 
+  --tabgradient: linear-gradient(180deg, #aff1de, transparent);
+
   --shadow: radial-gradient(
     circle,
     rgba(61, 79, 74, 1) 75%,
@@ -88,6 +90,48 @@ header {
   color: var(--almostwhite);
   text-align: center;
   margin-top: 1rem;
+}
+
+.tabs {
+  width: 95vw;
+  border-bottom: thin solid var(--dark);
+  color: var(--dark);
+  text-align: center;
+  margin: 3rem 0 2rem;
+}
+
+.tabs ul{
+  list-style: none;
+}
+
+.tabs li{
+  float: left;
+  padding: 0.5rem 1rem;
+  border: thin solid var(--dark);
+  margin: 0 0.3rem;
+  position: relative;
+  top: 2px;
+  cursor: pointer;
+}
+
+.tabs li:hover{
+  /* background: var(--tabgradient); */
+  color: var(--black);
+}
+
+.tabs .active{
+font-weight: bold;
+border-bottom: 2px solid var(--white);
+position: relative;
+background-color: var(--white);
+top: 2px;
+}
+
+.unfurl{
+  display: inline-block;
+rotate: 180deg;
+font-weight: bold;
+margin-left: 0.5rem;
 }
 
 .subheading {
