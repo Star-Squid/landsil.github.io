@@ -9,7 +9,27 @@ function activateTab(target){
   target.classList.add("active")
 };
 
+//display character list
 
+const characterList = document.getElementById("characterlist");
+const chartab = document.getElementById("chartab");
+
+chartab.addEventListener("mouseenter", showCharList);
+characterList.addEventListener("mouseout", hideCharList);
+
+function showCharList(){characterList.style.display = "block"}
+function hideCharList(){characterList.style.display = "none"}
+// borrowed tabs
+
+// $('input').on('change', function() {
+//   $('#select-op-btn').html(this.checked ? this.value : '');
+// });
+
+// $('.js-option').on('click', function() {
+//   $("#options").toggleClass("js-drop");
+// });
+
+// borrowed tabs
 
 const skillForm = document.getElementById("parameter-input");
 
