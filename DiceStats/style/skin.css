@@ -96,7 +96,7 @@ header {
 
 .tabs {
   width: 100vw;
-  border-bottom: thin solid var(--dark);
+  /* border-bottom: thin solid var(--dark); */
   color: var(--dark);
   text-align: center;
   margin: 3rem 0 2rem;
@@ -104,50 +104,54 @@ header {
   flex-flow: row nowrap;
   align-items: stretch;
   gap: 2rem; */
+
+  display: grid;
+  column-gap: 2rem;
+  /* grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr; */
+  grid-template-areas:
+    "dice characters spacer"
+    "hr hr hr"
+    ". characterlist .";
+    justify-items: space-around;
+  justify-content: space-around;
+  align-content: center;
 }
 
-.tabs ul{
-  list-style: none;
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: stretch;
-  gap: 2rem;
-  /* padding-left: 2rem; */
+.tabs hr{
+  width: 100vw;
+  border-width: 0 0 thin;
+  border-color: var(--dark);
+  grid-area: hr;
 }
 
-.tabs li{
-  /* float: left; */
-  justify-self: flex-start;
-  padding: 0.5rem 1rem;
+.tab{
+  justify-self: start;
+  width: 15ch;
+  background-color: var(--white);
   border: thin solid var(--dark);
-  background: var(--white);
-  margin: 0 0.3rem;
+
+  color: var(--dark);
+  text-align: center;
   position: relative;
   top: 1px;
-  cursor: pointer;
 }
 
-.tabs li:hover{
-  /* background: var(--tabgradient); */
-  color: var(--black);
+#spacer{
+  grid-area: spacer;
 }
 
-.tabs .active{
-font-weight: bold;
-border-bottom: 2px solid var(--white);
-position: relative;
-background-color: var(--white);
-top: 2px;
+#dicetab {
+  grid-area: dice;
 }
 
-.unfurl{
-  display: inline-block;
-rotate: 180deg;
-font-weight: bold;
-margin-left: 0.5rem;
+#chartab {
+  grid-area: characters;
 }
 
 #characterlist {
+  grid-area: characterlist;
+  border-top: none;
   display: block;
   font-weight: normal;
   width: 100%;
@@ -157,13 +161,31 @@ margin-left: 0.5rem;
   color: var(--dark);
   text-align: center;
   /* padding: 0.5rem 0; */
- 
+
   /* Position the tooltip text - see examples below! */
-  position: absolute;
+
+  /* position: absolute; */
   /* z-index: 1; */
-  left: -0.3rem;
-  top: -0.2rem;
+  /* left: -0.3rem;
+  top: -0.2rem; */
 }
+
+.tabs .active {
+  font-weight: bold;
+  border-bottom: 2px solid var(--white);
+  position: relative;
+  background-color: var(--white);
+  top: 2px;
+}
+
+.unfurl {
+  display: inline-block;
+  rotate: 180deg;
+  font-weight: bold;
+  margin-left: 0.5rem;
+}
+
+
 
 /* #chartab:hover .characterlist {
   visibility: visible;
@@ -173,29 +195,28 @@ margin-left: 0.5rem;
   visibility: hidden;
 }
 
-.hidden-buttons{
+.hidden-buttons {
   display: none;
 }
 
-#characterlist>ul{
+/* #characterlist > ul {
   width: 100%;
-}
-/* MY TABS ENNND */
+} */
+/* MY TABS ENNND
 /* BORROWED TABS START */
-#select-op-btn {
+/*#select-op-btn {
   /* border: 1px solid #F2F2F2; */
-  display: block;
-  width:100%;
+  /* display: block;
+  width: 100%; */
   /* padding: 5px; */
-  cursor: pointer;
+  /* cursor: pointer; */
   /* background-image: url("../assets/dropdown-arrow.svg"); */
   /* background-repeat: no-repeat;
   background-position: right center; */
-}
-
-#select-op-btn > li{
+/* } */
+/* 
+#select-op-btn > li {
   width: 100%;
-
 }
 
 .select_box {
@@ -206,7 +227,7 @@ margin-left: 0.5rem;
 ul#options {
   list-style-type: none;
   font-size: 0px;
-  border-color: #F2F2F2;
+  border-color: #f2f2f2;
   border-style: solid;
   border-width: 0px 1px 1px 1px;
 }
@@ -215,12 +236,12 @@ ul#options li label {
   font-size: 18px;
   display: block;
   padding: 5px;
-}
+} */
 
 /* ul#options li:hover {
   background: #F2F2F2;
 } */
-
+/*
 .js-drop {
   display: none;
 }
@@ -233,13 +254,13 @@ label {
   cursor: pointer;
 }
 
-.default{
-  color:#AAA;
+.default {
+  color: #aaa;
 }
 
-.space{
-  padding:15px 0;
-}
+.space {
+  padding: 15px 0;
+} */
 /* BORROWED TABS ENND */
 .subheading {
   text-transform: uppercase;
